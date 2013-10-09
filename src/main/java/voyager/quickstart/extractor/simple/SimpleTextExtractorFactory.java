@@ -1,0 +1,25 @@
+package voyager.quickstart.extractor.simple;
+
+import java.util.Locale;
+
+import voyager.api.discovery.extractor.Extractor;
+import voyager.discovery.extractor.info.AbstractJavaExtractorFactory;
+import voyager.extractors.misc.las.AsciiLogFileExtractor;
+
+public class SimpleTextExtractorFactory extends AbstractJavaExtractorFactory {
+
+  @Override
+  public String getDescription(Locale locale) {
+    return "Quickstart Sample Extractor";
+  }
+  
+  @Override
+  public String getExtractorName() {
+    return "simple";
+  }
+  
+  @Override
+  public Extractor newExtractor() {
+    return new SimpleTextExtractor();
+  }
+}

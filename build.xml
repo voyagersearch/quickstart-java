@@ -1,0 +1,84 @@
+<project name="voyager-quickstart-java" default="compile">
+
+  <property environment="env" />
+
+
+  <property name="build.dir"    value="build" />
+  <property name="src.dir"      value="src/main/java" />
+  <property name="resources.dir"      value="src/main/resources" />
+  <property name="src.tests"    value="src/test/java" />
+  <property name="test.dir"  value="testlogs" />
+
+  <!-- 
+  The voyager.app.dir is the path to voyager app folder
+  This should be set on the command line:
+    ant -Dvoyager.app.dir=d:/voyager/server_1.9/app 
+
+  If the property is not set, we will assume we are running within the 'dev/java' folder
+  -->
+  <property name="voyager.app.dir"  value="../.." />
+
+
+  <path id="compile.classpath">  
+    <fileset dir="lib">
+      <include name="**/*.jar"/>
+    </fileset>
+    <fileset dir="${voyager.app.dir}/lib">
+      <include name="**/*.jar"/>
+    </fileset>
+    <fileset dir="${voyager.app.dir}/dev/java/lib">
+      <include name="**/*.jar"/>
+    </fileset>
+  </path>  
+
+  <path id="test.classpath">  
+    <path refid="compile.classpath"/>
+    <pathelement path="${build.dir}"/>
+  </path> 
+
+  <!-- ===============================================
+       target: system
+       =============================================== -->
+  <target name="system" description="--> show system info">
+    <echo>
+      OS.NAME      = ${os.name}
+      OS.ARCH      = ${os.arch}
+      OS.VERSION   = ${os.version}
+      VOYAGER.APP  = ${voyager.app.dir}
+    </echo>
+  </target>
+
+
+  <!-- =================================
+        target: clean
+       ================================= -->
+  <target name="clean" description="--> clean the project">
+      <delete includeemptydirs="true" quiet="true">
+          <fileset dir="${build.dir}" />
+          <fileset dir="${test.output}" />
+    </delete>
+  </target>
+
+
+
+<!-- =================================
+        target: compile
+       ================================= -->
+  <target name="compile" depends="clean"
+    description="--> clean and compile the project">
+	  <echo message="compiling..."/>
+    <mkdir dir="${build.dir}" />
+
+    <javac
+        srcdir="${src.dir}"
+        destdir="${build.dir}" 
+        includeAntRuntime="false"
+        classpathref="compile.classpath"/>
+    <copy todir="${build.dir}">
+      <fileset dir="${resources.dir}" includes="**/*" />
+    </copy>
+    <echo message="compiled!" />
+  </target>
+
+
+</project>
