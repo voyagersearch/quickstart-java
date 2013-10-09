@@ -1,13 +1,17 @@
 <project name="voyager-quickstart-java" default="compile">
+  <!-- To see possible targets, run:
+         ant -p
+    -->
+  
+  <!-- Point to the source folders -->
+  <property name="src.dir"         value="src/main/java" />
+  <property name="resources.dir"   value="src/main/resources" />
+  <property name="src.tests"       value="src/test/java" />
+  <property name="build.dir"       value="build/bin"  />
+  <property name="test.dir"        value="build/test" />
 
+  <!-- Can set voyager.app.dir as system property -->
   <property environment="env" />
-
-
-  <property name="build.dir"    value="build" />
-  <property name="src.dir"      value="src/main/java" />
-  <property name="resources.dir"      value="src/main/resources" />
-  <property name="src.tests"    value="src/test/java" />
-  <property name="test.dir"  value="testlogs" />
 
   <!-- 
   The voyager.app.dir is the path to voyager app folder
@@ -17,7 +21,7 @@
   If the property is not set, we will assume we are running within the 'dev/java' folder
   -->
   <property name="voyager.app.dir"  value="../.." />
-
+  <property name="voyager.url"  value="http://localhost:8888/" />
 
   <path id="compile.classpath">  
     <fileset dir="lib">
@@ -36,6 +40,7 @@
     <pathelement path="${build.dir}"/>
   </path> 
 
+
   <!-- ===============================================
        target: system
        =============================================== -->
@@ -45,6 +50,7 @@
       OS.ARCH      = ${os.arch}
       OS.VERSION   = ${os.version}
       VOYAGER.APP  = ${voyager.app.dir}
+      VOYAGER.URL  = ${voyager.url}
     </echo>
   </target>
 
@@ -60,8 +66,7 @@
   </target>
 
 
-
-<!-- =================================
+  <!-- =================================
         target: compile
        ================================= -->
   <target name="compile" depends="clean"
@@ -80,5 +85,41 @@
     <echo message="compiled!" />
   </target>
 
+
+  <!-- =================================
+        target: test
+       ================================= -->
+  <target name="test" depends="compile"
+    description="--> simple unit tests">
+    <mkdir dir="${test.output}/unit" />
+    <junit printsummary="yes" haltonfailure="yes">
+      <classpath  refid="test.classpath" />
+      <formatter type="xml" />
+      <batchtest todir="${test.output}/unit">
+        <fileset dir="${src.tests}">
+          <include name="**/*Test.java" />
+          <exclude name="**/IntegrationTest.java" />
+        </fileset>
+      </batchtest>
+    </junit>
+  </target>
+
+  <!-- =================================
+        target: integration
+       ================================= -->
+  <target name="integration" depends="test"
+    description="--> run integration tests">
+    <mkdir dir="${test.output}/integration" />
+    <junit printsummary="yes" haltonfailure="yes">
+      <classpath  refid="test.classpath" />
+      <sysproperty key="voyager.url" value="${voyager.url}"/>
+      <formatter type="xml" />
+      <batchtest todir="${test.output}/integration">
+        <fileset dir="${src.tests}">
+          <exclude name="**/IntegrationTest.java" />
+        </fileset>
+      </batchtest>
+    </junit>
+  </target>
 
 </project>

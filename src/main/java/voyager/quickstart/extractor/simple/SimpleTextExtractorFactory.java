@@ -4,7 +4,6 @@ import java.util.Locale;
 
 import voyager.api.discovery.extractor.Extractor;
 import voyager.discovery.extractor.info.AbstractJavaExtractorFactory;
-import voyager.extractors.misc.las.AsciiLogFileExtractor;
 
 public class SimpleTextExtractorFactory extends AbstractJavaExtractorFactory {
 
