@@ -11,6 +11,13 @@ import voyager.api.domain.model.entry.EntryMeta;
 
 public class RestSamples {
 
+  public static DiscoveryJob makeCommitJob()
+  {
+    DiscoveryJob job = new DiscoveryJob();
+    job.setAction(DiscoveryAction.ADD);
+    return job;
+  }
+    
   public static DiscoveryJob makeAddSimpleRectord()
   {
     DiscoveryJob job = new DiscoveryJob();
