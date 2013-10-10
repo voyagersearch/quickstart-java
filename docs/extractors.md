@@ -16,21 +16,19 @@ Register ExtractorFactory
 -------------------------
 Extent <code>AbstractJavaExtractorFactory</code> with an instance that will
 
-Add a line in (META-INF/services/voyager.api.discovery.extractor.ExtractionWorkerInfo)[../src/main/resources/META-INF/services/voyager.api.discovery.extractor.ExtractionWorkerInfo] pointing to the factory class.
-
-When you restart voyager, these services will be registered and should be listed in:
-http://localhost:8888/manage/discovery/extractor
-
+Add a line in the java service loader file [META-INF/services/voyager.api.discovery.extractor.ExtractionWorkerInfo](../src/main/resources/META-INF/services/voyager.api.discovery.extractor.ExtractionWorkerInfo) 
+pointing to the factory class name.  This will load the factory on restart and these extractors will be listed in:
+  >  [http://localhost:8888/manage/discovery/extractor](http://localhost:8888/manage/discovery/extractor)
 
 
 Mime to Extractor Mapping
 -------------------------
 
-Extractors are mapped to mimetypes.  This mapping is managed using the (Apache Tika)[http://tika.apache.org/1.4/detection.html]
-content detection system.  This uses the standard (Freedesktop MIME-info XML spec)[http://standards.freedesktop.org/shared-mime-info-spec/].
+Extractors are mapped to mimetypes.  This mapping is managed using the [Apache Tika](http://tika.apache.org/1.4/detection.html)
+content detection system.  This uses the standard [Freedesktop MIME-info XML spec](http://standards.freedesktop.org/shared-mime-info-spec/).
 
 Voyager has extended this to support:
-  * mime > extractor mapping
+  * mime to extractor mapping
   * grouping component files (a shapefile is .shp + .dbf + .shx + ...)
   * format details
   * format tagging.  (keywords, product, company, application, etc)
@@ -76,7 +74,6 @@ To define more properties or new mimetypes, see the following example:
 Note that <code>voyager:components</code> specifies a list of extensions that are considered to be 
 part of the `same` entry.  This means that a .dbf file on without a .shp is recognized as its own
 entry
-
 
 
 
