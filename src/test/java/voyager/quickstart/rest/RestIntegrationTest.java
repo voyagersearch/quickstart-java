@@ -72,7 +72,7 @@ public class RestIntegrationTest {
     HttpPost httppost = new HttpPost(postURL);
     
     // 1. Send the Job
-    StringEntity body = new StringEntity(job.getWorkerJSON(), ContentType.APPLICATION_JSON);
+    StringEntity body = new StringEntity(job.toJSON(), ContentType.APPLICATION_JSON);
     httppost.setEntity(body);
     
     System.out.println("[execute] " + httppost.getRequestLine());
@@ -83,7 +83,7 @@ public class RestIntegrationTest {
     System.out.println("Post Response"+json.toString(2));
     
     // 2. send a 'commit' command so that the item is visible with a search
-    body = new StringEntity(RestSamples.makeCommitJob().getWorkerJSON(), ContentType.APPLICATION_JSON);
+    body = new StringEntity(RestSamples.makeCommitJob().toJSON(), ContentType.APPLICATION_JSON);
     httppost.setEntity(body);
     httpclient.execute(httppost, responseHandler);
     
