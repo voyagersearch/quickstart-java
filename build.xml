@@ -10,24 +10,21 @@
   <property name="build.dir"       value="build/bin"  />
   <property name="test.dir"        value="build/test" />
 
-  <!-- Can set voyager.app.dir as system property -->
-  <property environment="env" />
-
   <!-- 
-  The voyager.app.dir is the path to voyager app folder
+  The voyager.app is the path to voyager app folder
   This should be set on the command line:
-    ant -Dvoyager.app.dir=d:/voyager/server_1.9/app 
+    ant -Dvoyager.app=d:/voyager/server_1.9/app 
 
   If the property is not set, we will assume we are running within the 'dev/java' folder
   -->
-  <property name="voyager.app.dir"  value="../.." />
+  <property name="voyager.app"  value="../.." />
   <property name="voyager.url"  value="http://localhost:8888/" />
 
   <path id="compile.classpath">  
     <fileset dir="lib">
       <include name="**/*.jar"/>
     </fileset>
-    <fileset dir="${voyager.app.dir}/lib">
+    <fileset dir="${voyager.app}/lib">
       <include name="**/*.jar"/>
     </fileset>
   </path>  
@@ -35,7 +32,7 @@
   <path id="compile.test.classpath">  
     <path refid="compile.classpath"/>
     <pathelement path="${build.dir}"/>
-    <fileset dir="${voyager.app.dir}/dev/java/lib">
+    <fileset dir="${voyager.app}/dev/java/lib">
       <include name="**/*.jar"/>
     </fileset>
   </path> 
@@ -54,7 +51,7 @@
       OS.NAME      = ${os.name}
       OS.ARCH      = ${os.arch}
       OS.VERSION   = ${os.version}
-      VOYAGER.APP  = ${voyager.app.dir}
+      VOYAGER.APP  = ${voyager.app}
       VOYAGER.URL  = ${voyager.url}
     </echo>
   </target>
@@ -107,7 +104,7 @@
       <batchtest todir="${test.dir}/unit">
         <fileset dir="${src.tests}">
           <include name="**/*Test.java" />
-          <exclude name="**/IntegrationTest.java" />
+          <exclude name="**/*IntegrationTest.java" />
         </fileset>
       </batchtest>
     </junit>

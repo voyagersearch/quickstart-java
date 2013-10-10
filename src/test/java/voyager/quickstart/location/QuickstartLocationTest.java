@@ -5,6 +5,6 @@ import org.junit.Test;
 public class QuickstartLocationTest {
   @Test
   public void testLocation() {
-    System.out.println( "test location" );
+    System.out.println( "TODO: test location" );
   }
 }

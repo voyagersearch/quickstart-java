@@ -14,7 +14,7 @@ public class SimpleTextExtractorFactory extends AbstractJavaExtractorFactory {
   
   @Override
   public String getExtractorName() {
-    return "simple";
+    return "quickstart";
   }
   
   @Override

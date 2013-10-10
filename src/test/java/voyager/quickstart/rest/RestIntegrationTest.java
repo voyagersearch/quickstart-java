@@ -66,6 +66,10 @@ public class RestIntegrationTest {
     Assert.assertTrue(json.getBoolean("enabled")); // discovery should be enabled
   }
   
+  /**
+   * This is a utility class that will take a DiscoveryJob, index it and 
+   * verify that it successfully added the document
+   */
   private void postJobCommitAndVerifyIndex(DiscoveryJob job) throws Exception
   {
     String postURL = baseURL + "api/rest/discovery/job/index";
@@ -106,7 +110,8 @@ public class RestIntegrationTest {
   {
     DiscoveryJob job = RestSamples.makeAddSimpleRectord();
     postJobCommitAndVerifyIndex(job);
-    
+   
+    // Add a 
     job = RestSamples.makeAddRecordTree();
     postJobCommitAndVerifyIndex(job);
   }
