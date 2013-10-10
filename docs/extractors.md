@@ -16,7 +16,7 @@ Register ExtractorFactory
 -------------------------
 Extent <code>AbstractJavaExtractorFactory</code> with an instance that will
 
-Add a line in (META-INF/services/voyager.api.discovery.extractor.ExtractionWorkerInfo)[../../../resources/META-INF/services/voyager.api.discovery.extractor.ExtractionWorkerInfo] pointing to the factory class.
+Add a line in (META-INF/services/voyager.api.discovery.extractor.ExtractionWorkerInfo)[../src/main/resources/META-INF/services/voyager.api.discovery.extractor.ExtractionWorkerInfo] pointing to the factory class.
 
 When you restart voyager, these services will be registered and should be listed in:
 http://localhost:8888/manage/discovery/extractor
