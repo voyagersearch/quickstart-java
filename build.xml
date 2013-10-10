@@ -1,4 +1,4 @@
-<project name="voyager-quickstart-java" default="compile">
+<project name="voyager-quickstart-java" default="test">
   <!-- To see possible targets, run:
          ant -p
     -->
@@ -30,14 +30,19 @@
     <fileset dir="${voyager.app.dir}/lib">
       <include name="**/*.jar"/>
     </fileset>
+  </path>  
+
+  <path id="compile.test.classpath">  
+    <path refid="compile.classpath"/>
+    <pathelement path="${build.dir}"/>
     <fileset dir="${voyager.app.dir}/dev/java/lib">
       <include name="**/*.jar"/>
     </fileset>
-  </path>  
+  </path> 
 
   <path id="test.classpath">  
-    <path refid="compile.classpath"/>
-    <pathelement path="${build.dir}"/>
+    <path refid="compile.test.classpath"/>
+    <pathelement path="${test.dir}/bin"/>
   </path> 
 
 
@@ -59,9 +64,8 @@
         target: clean
        ================================= -->
   <target name="clean" description="--> clean the project">
-      <delete includeemptydirs="true" quiet="true">
-          <fileset dir="${build.dir}" />
-          <fileset dir="${test.output}" />
+    <delete includeemptydirs="true" quiet="true">
+      <fileset dir="build" />
     </delete>
   </target>
 
@@ -73,12 +77,17 @@
     description="--> clean and compile the project">
 	  <echo message="compiling..."/>
     <mkdir dir="${build.dir}" />
-
+    <mkdir dir="${test.dir}/bin" />
     <javac
         srcdir="${src.dir}"
         destdir="${build.dir}" 
         includeAntRuntime="false"
         classpathref="compile.classpath"/>
+    <javac
+        srcdir="${src.tests}"
+        destdir="${test.dir}/bin" 
+        includeAntRuntime="false"
+        classpathref="compile.test.classpath"/>
     <copy todir="${build.dir}">
       <fileset dir="${resources.dir}" includes="**/*" />
     </copy>
@@ -91,11 +100,11 @@
        ================================= -->
   <target name="test" depends="compile"
     description="--> simple unit tests">
-    <mkdir dir="${test.output}/unit" />
+    <mkdir dir="${test.dir}/unit" />
     <junit printsummary="yes" haltonfailure="yes">
       <classpath  refid="test.classpath" />
       <formatter type="xml" />
-      <batchtest todir="${test.output}/unit">
+      <batchtest todir="${test.dir}/unit">
         <fileset dir="${src.tests}">
           <include name="**/*Test.java" />
           <exclude name="**/IntegrationTest.java" />
@@ -108,13 +117,13 @@
         target: integration
        ================================= -->
   <target name="integration" depends="test"
-    description="--> run integration tests">
-    <mkdir dir="${test.output}/integration" />
+    description="--> run integration tests (requires running server)">
+    <mkdir dir="${test.dir}/integration" />
     <junit printsummary="yes" haltonfailure="yes">
       <classpath  refid="test.classpath" />
       <sysproperty key="voyager.url" value="${voyager.url}"/>
       <formatter type="xml" />
-      <batchtest todir="${test.output}/integration">
+      <batchtest todir="${test.dir}/integration">
         <fileset dir="${src.tests}">
           <exclude name="**/IntegrationTest.java" />
         </fileset>
