@@ -7,7 +7,25 @@ This project aims to show simple samples using various Voyager APIs from Java.
 Custom Extractor
 ----------------
 
-Link to custom extractor.  Explain the tika syntax
+A custom extractor is used to open a file (or InputStream) and generate the initial properties
+that will be passed through the indexing pipeline.
+
+Java based Extractors are registed by implementing a 
+
+
+
+Mime to Extractor Mapping
+-------------------------
+
+Extractors are mapped to mimetypes.  This mapping is managed using the (Apache Tika)[http://tika.apache.org/1.4/detection.html]
+content detection system.  This uses the standard (Freedesktop MIME-info XML spec)[http://standards.freedesktop.org/shared-mime-info-spec/].
+Voyager has extended this to support:
+# mime > extractor mapping
+# grouping component files (a shapefile is .shp + .dbf + .shx + ...)
+# format details
+# format tagging.  (keywords, product, company, application, etc)
+
+To register your custom 
 
 
 
