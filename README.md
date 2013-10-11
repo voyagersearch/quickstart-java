@@ -1,7 +1,7 @@
 Voyager Java Quickstart
 ========================
 
-This project aims to show simple examples extending Voyager with Java
+This purpose of this article is to provide simple examples of extending Voyager with Java.
 
  * [Custom Extractors and mimetypes](docs/extractors.md)
  * [Working with DiscoveryJobs](docs/discoveryjob.md)
@@ -19,7 +19,7 @@ Check [Lucene JavaBugs](http://wiki.apache.org/lucene-java/JavaBugs) before deci
 Getting Started
 ---------------
 
-This quickstart is included in the Voyager distribution in the <code>${app.dir}/dev</code> folder.
+This quickstart guide is included in the Voyager distribution in the <code>${app.dir}/dev</code> folder.
 
 Download voyager here: http://voyagersearch.com/download
 
@@ -27,7 +27,7 @@ When running these samples from the <code>${app.dir}/dev</code> folder, simply r
 
     ant
 
-To point to any voyager install, set the `voyager.app` system property:
+To point to any Voyager install, set the `voyager.app` system property:
 
     ant -Dvoyager.app=d:\voyager\server_1.9\app 
 
