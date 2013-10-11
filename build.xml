@@ -88,6 +88,9 @@
     <copy todir="${build.dir}">
       <fileset dir="${resources.dir}" includes="**/*" />
     </copy>
+    <copy todir="${test.dir}/bin">
+      <fileset dir="${src.tests}" includes="**/*" />
+    </copy>
     <echo message="compiled!" />
   </target>
 
