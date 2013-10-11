@@ -9,28 +9,6 @@ This project aims to show simple samples using various Voyager APIs from Java.
  * [Custom Locations](docs/locations.md)
 
 
-Discovery Jobs
---------------
-
-Show how to submit jobs via REST api
-
-
-
-Custom Location
----------------
-
-Coming soon.  Implement a custom locaiton
-
-
-
-Direct Solr Access
-------------------
-
-The voyager index is backed by [Apache Solr](http://lucene.apache.org/solr/).  For java access to the 
-index, we reccomend using [SolrJ](https://cwiki.apache.org/confluence/display/solr/Using+SolrJ) the java
-client to solr.
-
-
 
 Integration Tests
 =================
