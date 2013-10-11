@@ -1,4 +1,4 @@
-package voyager.quickstart.rest;
+package voyager.quickstart.discovery;
 
 import org.apache.http.auth.AuthScope;
 import org.apache.http.auth.UsernamePasswordCredentials;
@@ -87,7 +87,7 @@ public class RestIntegrationTest {
     System.out.println("Post Response"+json.toString(2));
     
     // 2. send a 'commit' command so that the item is visible with a search
-    body = new StringEntity(RestSamples.makeCommitJob().toJSON(), ContentType.APPLICATION_JSON);
+    body = new StringEntity(JobSamples.makeCommitJob().toJSON(), ContentType.APPLICATION_JSON);
     httppost.setEntity(body);
     httpclient.execute(httppost, responseHandler);
     
@@ -108,11 +108,11 @@ public class RestIntegrationTest {
   @Test
   public void testPostDocumentsViaHTTP() throws Exception 
   {
-    DiscoveryJob job = RestSamples.makeAddSimpleRectord();
+    DiscoveryJob job = JobSamples.makeAddSimpleRectord();
     postJobCommitAndVerifyIndex(job);
    
     // Add a 
-    job = RestSamples.makeAddRecordTree();
+    job = JobSamples.makeAddRecordTree();
     postJobCommitAndVerifyIndex(job);
   }
 }

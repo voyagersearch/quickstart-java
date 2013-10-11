@@ -1,4 +1,4 @@
-package voyager.quickstart.rest;
+package voyager.quickstart.discovery;
 
 import java.util.Random;
 
@@ -9,7 +9,7 @@ import voyager.api.domain.model.entry.Entry;
 import voyager.api.domain.model.entry.EntryLink;
 import voyager.api.domain.model.entry.EntryMeta;
 
-public class RestSamples {
+public class JobSamples {
 
   public static DiscoveryJob makeCommitJob()
   {
@@ -97,15 +97,29 @@ public class RestSamples {
   public static void main(String[] args) throws Exception
   {
     DiscoveryJob job = makeAddSimpleRectord();
-    System.out.println( "\n\nSIMPLE:\n===================" );
+    System.out.println("\n#### Simple Discovery Job");
+    System.out.println("A simple job with no external file reference");
+    System.out.println( "```json" );
     System.out.println( job.toPrettyJSON() );
-    
-    job = makeAddRecordTree();
-    System.out.println( "\n\nTREE:\n===================" );
-    System.out.println( job.toPrettyJSON() );
+    System.out.println( "```" );
 
-    job = makeAddRecordWithLinks();
-    System.out.println( "\n\nLINKS:\n===================" );
+    System.out.println("#### Entry with internal structure");
+    System.out.println("children with <code>index: false</code> will appear in the tree, but not have their own record");
+    job = makeAddRecordTree();
+    System.out.println( "\n```json" );
     System.out.println( job.toPrettyJSON() );
+    System.out.println( "```" );
+    System.out.println( "The tree structure is displayed in the ui as:");
+    System.out.println( "![structure](imgs/structure.png)");
+
+
+    System.out.println("#### Entry with links to data");
+    System.out.println("Items with links to other data.");
+    job = makeAddRecordWithLinks();
+    System.out.println( "\n```json" );
+    System.out.println( job.toPrettyJSON() );
+    System.out.println( "```" );
+    System.out.println( "Links are displayed in the ui as:");
+    System.out.println( "![structure](imgs/links.png)");
   }
 }
