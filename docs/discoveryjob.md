@@ -42,7 +42,7 @@ The possible Actions are:
 Entry
 ------
 The Entry class holds all the key information about the item that will be indeded.  The entry is essentially a
-(SolrInputDocument)[http://svn.apache.org/repos/asf/lucene/dev/trunk/solr/solrj/src/java/org/apache/solr/common/SolrInputDocument.java] that has been extended to support:
+[SolrInputDocument](http://svn.apache.org/repos/asf/lucene/dev/trunk/solr/solrj/src/java/org/apache/solr/common/SolrInputDocument.java) that has been extended to support:
   * geospatial content
   * nested documents
   * links to other entries
