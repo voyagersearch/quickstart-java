@@ -9,6 +9,10 @@ import org.apache.http.entity.ContentType;
 import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.BasicResponseHandler;
 import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.solr.client.solrj.SolrQuery;
+import org.apache.solr.client.solrj.SolrServer;
+import org.apache.solr.client.solrj.impl.HttpSolrServer;
+import org.apache.solr.client.solrj.response.QueryResponse;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
@@ -25,6 +29,7 @@ public class RestIntegrationTest {
   
   String baseURL;
   DefaultHttpClient httpclient;
+  SolrServer solr;
   
   @Before
   public void initClient()
@@ -36,6 +41,7 @@ public class RestIntegrationTest {
     if(!baseURL.endsWith("/")) {
       baseURL += "/";
     }
+    solr = new HttpSolrServer(baseURL+"solr/v0");
 
     httpclient = new DefaultHttpClient();
     httpclient.getCredentialsProvider().setCredentials(
@@ -70,7 +76,7 @@ public class RestIntegrationTest {
    * This is a utility class that will take a DiscoveryJob, index it and 
    * verify that it successfully added the document
    */
-  private void postJobCommitAndVerifyIndex(DiscoveryJob job) throws Exception
+  private String postJobCommitAndVerifyIndex(DiscoveryJob job) throws Exception
   {
     String postURL = baseURL + "api/rest/discovery/job/index";
     HttpPost httppost = new HttpPost(postURL);
@@ -85,34 +91,61 @@ public class RestIntegrationTest {
 
     JSONObject json = new JSONObject(rsp);
     System.out.println("Post Response"+json.toString(2));
-    
-    // 2. send a 'commit' command so that the item is visible with a search
-    body = new StringEntity(JobSamples.makeCommitJob().toJSON(), ContentType.APPLICATION_JSON);
-    httppost.setEntity(body);
-    httpclient.execute(httppost, responseHandler);
-    
-    // 3. Now make sure we get it from the index
-    HttpGet httpget = new HttpGet(baseURL+"/api/rest/index/record/"+job.getId());
-    rsp = httpclient.execute(httpget, responseHandler);
-    json = new JSONObject(rsp);
-    System.out.println("Confirm: "+json.toString(2));
-    Assert.assertEquals(job.getId(), json.getString("id"));
-    
-    Object val = json.opt(DexField.INDEXING_ERROR.name);
-    if(val!=null) {
-      Assert.fail("Indexed document has errors: "+val);
+    try {
+      // Index Jobs will have an entry/fields/id field
+      String id = json.getJSONObject("entry").getJSONObject("fields").getString("id");
+
+      // Wait for the results to flush through the system
+      solr.commit(true, true);
+      
+      // Now find the result via REST
+      HttpGet httpget = new HttpGet(baseURL+"/api/rest/index/record/"+id);
+      rsp = httpclient.execute(httpget, responseHandler);
+      json = new JSONObject(rsp);
+      System.out.println("Confirm: "+json.toString(2));
+      Assert.assertEquals(id, json.getString("id"));
+      
+      Object val = json.opt(DexField.INDEXING_ERROR.name);
+      if(val!=null) {
+        Assert.fail("Indexed document has errors: "+val);
+      }
+      return id;
     }
+    catch(Exception ex) {
+      // ok
+    }
+    return null;
   }
   
 
   @Test
   public void testPostDocumentsViaHTTP() throws Exception 
   {
-    DiscoveryJob job = JobSamples.makeAddSimpleRectord();
-    postJobCommitAndVerifyIndex(job);
+    // Add a file reference
+    postJobCommitAndVerifyIndex(JobSamples.makeAddFile());
+
+    // Add a URL reference
+    postJobCommitAndVerifyIndex(JobSamples.makeAddURL());
+
+    // Add a record without file reference
+    postJobCommitAndVerifyIndex(JobSamples.makeAddRecordWithoutFile());
    
-    // Add a 
-    job = JobSamples.makeAddRecordTree();
+    // Record with a tree
+    postJobCommitAndVerifyIndex(JobSamples.makeAddRecordTree());
+
+    // Record with links to data
+    postJobCommitAndVerifyIndex(JobSamples.makeAddRecordWithLinks());
+   
+    // Add a copy of the tree document so we can remove it
+    DiscoveryJob job = JobSamples.makeAddRecordTree();
+    job.setId("treecopy");
     postJobCommitAndVerifyIndex(job);
+    postJobCommitAndVerifyIndex(JobSamples.makeDelteJob(job.getId()));
+    solr.commit(true, true);
+    
+    // Check that the document (and its children) were removed
+    System.out.println( "Check that everythign was removed... "+job.getId() );
+    QueryResponse rsp = solr.query(new SolrQuery(DexField.ROOT.name+":"+job.getId()));
+    Assert.assertEquals(0, rsp.getResults().getNumFound());
   }
 }
