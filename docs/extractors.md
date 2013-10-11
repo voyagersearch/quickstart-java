@@ -1,23 +1,26 @@
 Custom Extractor
 ================
 
-  # Create Extractor
-  # Register ExtractorFactory
-  # Map mimetype to Extractor
+A custom extractor is used to open a file (or InputStream) and generate the initial properties
+that will be passed through the indexing pipeline.
+
 
 
 Create Extractor
 ----------------
-This sample extends <code>HttpEnabledExtractor</code>
+For a simple first example, we extend <code>HttpEnabledExtractor</code> to create [SimpleTextExtractor.java].  
+This class simply reads the input stream and puts the contents of in a `text` property.
 
+The behavior is exercised in [SimpleTextExtractorTest.java]
 
 
 Register ExtractorFactory
 -------------------------
-Extent <code>AbstractJavaExtractorFactory</code> with an instance that will
+Each extractor needs a factory registed with the [Java ServiceLoader](http://docs.oracle.com/javase/6/docs/api/java/util/ServiceLoader.html)
 
-Add a line in the java service loader file [META-INF/services/voyager.api.discovery.extractor.ExtractionWorkerInfo](../src/main/resources/META-INF/services/voyager.api.discovery.extractor.ExtractionWorkerInfo) 
-pointing to the factory class name.  This will load the factory on restart and these extractors will be listed in:
+In this example, we extend <code>AbstractJavaExtractorFactory</code> and create [SimpleTextExtractorFactory.java].  
+This class is noted in [META-INF/services/voyager.api.discovery.extractor.ExtractionWorkerInfo](../src/main/resources/META-INF/services/voyager.api.discovery.extractor.ExtractionWorkerInfo).
+When Voyager starts up these classes registered and should be listed on:
   >  [http://localhost:8888/manage/discovery/extractor](http://localhost:8888/manage/discovery/extractor)
 
 
@@ -75,6 +78,11 @@ Note that <code>voyager:components</code> specifies a list of extensions that ar
 part of the `same` entry.  This means that a .dbf file on without a .shp is recognized as its own
 entry
 
+
+
+[SimpleTextExtractor.java]:        ../src/main/java/voyager/quickstart/extractor/simple/SimpleTextExtractor.java
+[SimpleTextExtractorFactory.java]: ../src/main/java/voyager/quickstart/extractor/simple/SimpleTextExtractorFactory.java
+[SimpleTextExtractorTest.java]:    ../src/test/java/voyager/quickstart/extractor/simple/SimpleTextExtractorTest.java
 
 
 
