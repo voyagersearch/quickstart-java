@@ -11,7 +11,7 @@ Create Extractor
 For a simple first example, we extend <code>HttpEnabledExtractor</code> to create [SimpleTextExtractor.java].  
 This class simply reads the input stream and puts the contents of in a `text` property.
 
-The behavior is exercised in [SimpleTextExtractorTest.java]
+The basic behavior is tested in [SimpleTextExtractorTest.java]
 
 
 Register ExtractorFactory
