@@ -13,7 +13,9 @@ Discovery/Job/Index
 -------------------
 To manipulate the index, submit a DiscoveryJob to <code>/api/rest/discovery/job/index</code>
 
-For samples see: [RestIntegrationTest](../src/test/java/voyager/quickstart/discovery/RestIntegrationTest.java)
+See [RestIntegrationTest.java](../src/test/java/voyager/quickstart/discovery/RestIntegrationTest.java) for 
+examples of submitting various [DiscoveryJobs](discoveryjob-examples.md) using [Apache HTTP Client](http://hc.apache.org/)
+
 
 
 
