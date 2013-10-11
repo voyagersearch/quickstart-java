@@ -9,9 +9,11 @@ This purpose of this article is to provide simple examples of extending Voyager 
  * [Direct Solr Access](docs/solr.md)
  * [Custom Locations](docs/locations.md)
 
+Some general information about Voyager:
+
 Voyager runs on Java 1.7+
 
-The Oracle JVMs have been tested, other JVMs may or may not work. 
+The Oracle JVMs have been tested successfully. Other JVMs have are untested and their viability is unknown. 
 
 Check [Lucene JavaBugs](http://wiki.apache.org/lucene-java/JavaBugs) before deciding a deployment JVM.
 
@@ -19,9 +21,9 @@ Check [Lucene JavaBugs](http://wiki.apache.org/lucene-java/JavaBugs) before deci
 Getting Started
 ---------------
 
-This quickstart guide is included in the Voyager distribution in the <code>${app.dir}/dev</code> folder.
+To get started, download Voyager here: http://voyagersearch.com/download
 
-Download voyager here: http://voyagersearch.com/download
+This Quickstart Guide is also included in the Voyager distribution in the <code>${app.dir}/dev</code> folder.
 
 When running these samples from the <code>${app.dir}/dev</code> folder, simply run:
 
@@ -36,7 +38,7 @@ Integration Tests
 -----------------
 
 These samples include simple unit tests in addition to more complex integration tests.  The integration 
-tests require an instance of voyager running.  By default the integration tests will look to http://localhost:8888, 
+tests require an instance of Voyager to be running.  By default the integration tests will look to http://localhost:8888, 
 to change this, set the `voyager.url` system property:
 
     ant -Dvoyager.url=http://yourhost:2345/path integration
