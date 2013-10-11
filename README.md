@@ -27,7 +27,7 @@ When running these samples from the <code>${app.dir}/dev</code> folder, simply r
 
     ant
 
-To point to any voyager install, run
+To point to any voyager install, set the `voyager.app` system property:
 
     ant -Dvoyager.app=d:\voyager\server_1.9\app 
 
@@ -37,7 +37,7 @@ Integration Tests
 
 These samples include simple unit tests in addition to more complex integration tests.  The integration 
 tests require an instance of voyager running.  By default the integration tests will look to http://localhost:8888, 
-to change this, set the <code>voyager.url</code> system property:
+to change this, set the `voyager.url` system property:
 
     ant -Dvoyager.url=http://yourhost:2345/path integration
 
