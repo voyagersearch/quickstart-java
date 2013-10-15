@@ -15,15 +15,13 @@
   This should be set on the command line:
     ant -Dvoyager.app=d:/voyager/server_1.9/app 
 
-  If the property is not set, we will assume we are running within the 'dev/java' folder
+  If the property is not set, we will assume we are running within the 'dev/java/quickstart' folder
   -->
-  <property name="voyager.app"  value="../.." />
+  <property name="voyager.app"  value="../../../app" />
+  <property name="voyager.dev"  value="${voyager.app}/../dev" />
   <property name="voyager.url"  value="http://localhost:8888/" />
 
   <path id="compile.classpath">  
-    <fileset dir="lib">
-      <include name="**/*.jar"/>
-    </fileset>
     <fileset dir="${voyager.app}/lib">
       <include name="**/*.jar"/>
     </fileset>
@@ -32,7 +30,7 @@
   <path id="compile.test.classpath">  
     <path refid="compile.classpath"/>
     <pathelement path="${build.dir}"/>
-    <fileset dir="${voyager.app}/dev/java/lib">
+    <fileset dir="${voyager.dev}/lib">
       <include name="**/*.jar"/>
     </fileset>
   </path> 
@@ -52,6 +50,7 @@
       OS.ARCH      = ${os.arch}
       OS.VERSION   = ${os.version}
       VOYAGER.APP  = ${voyager.app}
+      VOYAGER.DEV  = ${voyager.dev}
       VOYAGER.URL  = ${voyager.url}
     </echo>
   </target>
