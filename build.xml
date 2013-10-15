@@ -115,7 +115,7 @@
   <!-- =================================
         target: integration
        ================================= -->
-  <target name="integration" depends="test"
+  <target name="integration" depends="system,test"
     description="--> run integration tests (requires running server)">
     <mkdir dir="${test.dir}/integration" />
     <junit printsummary="yes" haltonfailure="yes">
