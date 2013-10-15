@@ -23,9 +23,10 @@ Getting Started
 
 To get started, download Voyager here: http://voyagersearch.com/download
 
-This Quickstart Guide is also included in the Voyager distribution in the <code>${app.dir}/dev</code> folder.
+This Quickstart Guide is also included in the Voyager distribution in the <code>${install.dir}/dev</code> folder.  
+By default this is <code>c:\voyager\server_1.9\dev</code>
 
-When running these samples from the <code>${app.dir}/dev</code> folder, simply run:
+When running these samples from the <code>${install.dir}/dev/java/quickstart</code> folder, simply run:
 
     ant
 
