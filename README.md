@@ -51,7 +51,14 @@ Quickstart Distribution
 -----------------------
 This file is included in the standard Voyager download.  The version info is listed below:
 <pre>
- @versioninfo@
+Original Source: 
+https://github.com/voyagersearch/quickstart-java.git
+ 
+Date: 
+@touch.time@
+
+Version: 
+https://github.com/voyagersearch/quickstart-java/commit/@githash@
 </pre>
 
 
