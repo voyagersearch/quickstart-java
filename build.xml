@@ -30,7 +30,7 @@
   <path id="compile.test.classpath">  
     <path refid="compile.classpath"/>
     <pathelement path="${build.dir}"/>
-    <fileset dir="${voyager.dev}/lib">
+    <fileset dir="${voyager.dev}/java/lib">
       <include name="**/*.jar"/>
     </fileset>
   </path> 
