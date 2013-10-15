@@ -47,6 +47,13 @@ to change this, set the `voyager.url` system property:
 
 
 
+Quickstart Distribution
+-----------------------
+This file is included in the standard Voyager download.  The version info is listed below:
+<pre>
+ @versioninfo@
+</pre>
+
 
 
 
