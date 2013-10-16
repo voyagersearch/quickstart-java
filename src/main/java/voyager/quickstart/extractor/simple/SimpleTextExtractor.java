@@ -4,6 +4,7 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.nio.charset.Charset;
 import java.util.Date;
+import java.util.UUID;
 
 import org.apache.commons.io.IOUtils;
 
@@ -37,6 +38,10 @@ public class SimpleTextExtractor extends HttpEnabledExtractor<Entry>
 
       // Fill in some value
       entry.setField(DexField.AUTHOR, "author");
+      entry.getFields().setField("meta_category_your_field", "something "+System.currentTimeMillis());
+      entry.getFields().addField("meta_category_your_field", "else "+System.currentTimeMillis());
+      entry.getFields().setField("meta_category_another", UUID.randomUUID().toString());
+      
 
       // Set a name field
       String name = (String)entry.getFieldValue(DexField.NAME);
