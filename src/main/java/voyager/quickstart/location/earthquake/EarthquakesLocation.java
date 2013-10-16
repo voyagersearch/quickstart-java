@@ -1,14 +1,25 @@
 package voyager.quickstart.location.earthquake;
 
-import voyager.api.discovery.location.Location;
-import voyager.api.discovery.location.LocationType;
+import java.net.URI;
+import java.net.URISyntaxException;
 
-public class EarthquakesLocation extends Location {
+import com.google.common.base.Throwables;
+
+import voyager.api.discovery.location.service.ServiceLocation;
+
+public class EarthquakesLocation extends ServiceLocation {
 
   public static final String TYPE = "earthquakes";
   
-  // See others: http://earthquake.usgs.gov/earthquakes/feed/v1.0/atom.php
-  private String url = "http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_hour.atom";
+  public EarthquakesLocation() {
+    // See others: http://earthquake.usgs.gov/earthquakes/feed/v1.0/atom.php
+    try {
+      setURI(new URI("http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_day.atom"));
+    }
+    catch(URISyntaxException ex) {
+      Throwables.propagate(ex);
+    }
+  }
   
   @Override
   public String getLocationDisplay() {

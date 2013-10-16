@@ -7,18 +7,20 @@
   <property name="src.dir"         value="src/main/java" />
   <property name="resources.dir"   value="src/main/resources" />
   <property name="src.tests"       value="src/test/java" />
+  <property name="output.jar"      value="build/voyager-quickstart.jar"  />
   <property name="build.dir"       value="build/bin"  />
   <property name="test.dir"        value="build/test" />
 
   <!-- 
-  The voyager.app is the path to voyager app folder
+  The voyager.dir is the path to voyager dir folder
   This should be set on the command line:
-    ant -Dvoyager.app=d:/voyager/server_1.9/app 
+    ant -Dvoyager.dir=d:/voyager/server_1.9/ 
 
   If the property is not set, we will assume we are running within the 'dev/java/quickstart' folder
   -->
-  <property name="voyager.app"  value="../../../app" />
-  <property name="voyager.dev"  value="${voyager.app}/../dev" />
+  <property name="voyager.dir"  value="../../.." />
+  <property name="voyager.app"  value="${voyager.dir}/app" />
+  <property name="voyager.dev"  value="${voyager.dir}/dev" />
   <property name="voyager.url"  value="http://localhost:8888/" />
 
   <path id="compile.classpath">  
@@ -90,6 +92,7 @@
     <copy todir="${test.dir}/bin">
       <fileset dir="${src.tests}" includes="**/*" />
     </copy>
+    <jar destfile="${output.jar}" basedir="${build.dir}"/>
     <echo message="compiled!" />
   </target>
 
@@ -110,6 +113,11 @@
         </fileset>
       </batchtest>
     </junit>
+  </target>
+
+  <target name="deploy" depends="test"
+    description="--> copy jar to extensions folder">
+    <copy file="${output.jar}" todir="${voyager.app}/lib/ext"/>
   </target>
 
   <!-- =================================

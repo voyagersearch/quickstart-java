@@ -18,5 +18,6 @@ public class SimpleTextExtractorTest {
     DiscoveryJob job = new DiscoveryJob();
     Entry out = extractor.read(job, input, null, null);
     
-    Assert.assertEquals("The body text", out.getFieldValue(DexField.TEXT));  }
+    Assert.assertEquals("The body text", out.getFieldValue(DexField.TEXT));  
+  }
 }
