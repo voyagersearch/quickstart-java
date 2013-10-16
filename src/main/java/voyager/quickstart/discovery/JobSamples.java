@@ -170,7 +170,7 @@ public class JobSamples {
     link = new EntryLink();
     link.setName("tree data");
     // with a path and no 'format' we will try to detect it
-    link.setPath(new File(docs,"imgs/tree.png").getAbsolutePath());
+    link.setPath(new File(docs,"imgs/structure.png").getAbsolutePath());
     link.setRelation("data");
     entry.addLink(link);
     
