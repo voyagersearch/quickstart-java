@@ -117,7 +117,9 @@
 
   <target name="deploy" depends="test"
     description="--> copy jar to extensions folder">
-    <copy file="${output.jar}" todir="${voyager.app}/lib/ext"/>
+    <copy file="${output.jar}" todir="${voyager.app}/lib/ext" 
+      overwrite="true"
+      verbose="true"/>
   </target>
 
   <!-- =================================
