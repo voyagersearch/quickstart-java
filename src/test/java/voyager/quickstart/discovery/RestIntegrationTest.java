@@ -21,40 +21,12 @@ import org.junit.Test;
 import voyager.api.discovery.jobs.DiscoveryJob;
 import voyager.api.domain.model.entry.DexField;
 import voyager.api.infrastructure.json.JSONObject;
+import voyager.quickstart.BaseIntegrationTest;
 
 /**
  * This test hits a live Voyager HTTP Server
  */
-public class RestIntegrationTest {
-  
-  String baseURL;
-  DefaultHttpClient httpclient;
-  SolrServer solr;
-  
-  @Before
-  public void initClient()
-  {
-    baseURL = System.getProperty("voyager.url");
-    if(baseURL==null) {
-      baseURL = "http://localhost:7777/";
-    }
-    if(!baseURL.endsWith("/")) {
-      baseURL += "/";
-    }
-    solr = new HttpSolrServer(baseURL+"solr/v0");
-
-    httpclient = new DefaultHttpClient();
-    httpclient.getCredentialsProvider().setCredentials(
-        AuthScope.ANY,
-        // Add the default credentials
-        new UsernamePasswordCredentials("admin", "admin"));
-  }
-  
-  @After
-  public void shutdownClient() {
-    httpclient.getConnectionManager().shutdown();
-    httpclient = null;
-  }
+public class RestIntegrationTest extends BaseIntegrationTest {
   
   @Test
   public void testGetDiscoveryStatus() throws Exception 
