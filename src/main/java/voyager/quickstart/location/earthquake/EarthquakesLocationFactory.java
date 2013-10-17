@@ -1,14 +1,17 @@
 package voyager.quickstart.location.earthquake;
 
 import java.io.IOException;
+import java.net.URI;
+import java.net.URISyntaxException;
 
 import org.apache.solr.client.solrj.SolrServer;
+
+import com.google.common.base.Throwables;
 
 import voyager.api.discovery.DiscoveryRunner;
 import voyager.api.discovery.jobs.JobSubmitter;
 import voyager.api.discovery.location.LocationFactory;
 import voyager.common.util.Registry;
-import voyager.extractors.services.wms.DiscoveryRunnerWMS;
 
 public class EarthquakesLocationFactory implements LocationFactory<EarthquakesLocation> {
 
@@ -20,6 +23,20 @@ public class EarthquakesLocationFactory implements LocationFactory<EarthquakesLo
   @Override
   public EarthquakesLocation newInstance() throws IllegalStateException {
     return new EarthquakesLocation();
+  }
+
+  @Override
+  public EarthquakesLocation newSampleInstance() {
+    // See others: http://earthquake.usgs.gov/earthquakes/feed/v1.0/atom.php
+    try {
+      EarthquakesLocation loc = new EarthquakesLocation();
+      loc.setURI(new URI("http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_day.atom"));
+      return loc;
+    }
+    catch(URISyntaxException ex) {
+      Throwables.propagate(ex);
+    }
+    return null;
   }
 
   @Override
