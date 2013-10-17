@@ -54,10 +54,13 @@ public class EarthquakesDiscoveryRunner extends ServiceDiscoveryRunner<Earthquak
 
   @Override
   protected void doCrawl() throws Exception {
-    Parser parser = getAbdera().getParser();
+    URI uri = location.getURI();
+    if(uri==null) {
+      throw new IllegalArgumentException("Missing URI");
+    }
     
+    Parser parser = getAbdera().getParser();
     try {
-      URI uri = location.getURI();
       Document<Feed> xdoc = parser.parse(openStream(uri), uri.toString());
       Feed feed = xdoc.getRoot();
       // Get the feed title

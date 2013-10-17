@@ -33,6 +33,7 @@ public class EarthquakesLocationTest {
     });
     
     EarthquakesLocation loc = new EarthquakesLocation();
+    loc.setURI(new URI("http://nothing/")); // not used
     EarthquakesDiscoveryRunner runner = new EarthquakesDiscoveryRunner(loc, solr, jobs) {
       @Override
       protected InputStream openStream(URI uri) throws IOException

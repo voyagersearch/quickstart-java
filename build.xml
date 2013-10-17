@@ -80,12 +80,14 @@
         srcdir="${src.dir}"
         destdir="${build.dir}" 
         includeAntRuntime="false"
-        classpathref="compile.classpath"/>
+        classpathref="compile.classpath"
+        debug="true"/>
     <javac
         srcdir="${src.tests}"
         destdir="${test.dir}/bin" 
         includeAntRuntime="false"
-        classpathref="compile.test.classpath"/>
+        classpathref="compile.test.classpath"
+        debug="true"/>
     <copy todir="${build.dir}">
       <fileset dir="${resources.dir}" includes="**/*" />
     </copy>
