@@ -2,8 +2,13 @@ package voyager.quickstart.location.earthquake;
 
 import java.io.IOException;
 
+import org.apache.solr.client.solrj.SolrServer;
+
 import voyager.api.discovery.DiscoveryRunner;
+import voyager.api.discovery.jobs.JobSubmitter;
 import voyager.api.discovery.location.LocationFactory;
+import voyager.common.util.Registry;
+import voyager.extractors.services.wms.DiscoveryRunnerWMS;
 
 public class EarthquakesLocationFactory implements LocationFactory<EarthquakesLocation> {
 
@@ -19,11 +24,13 @@ public class EarthquakesLocationFactory implements LocationFactory<EarthquakesLo
 
   @Override
   public DiscoveryRunner<?> newRunner(EarthquakesLocation loc, boolean delta) throws IOException {
-    throw new RuntimeException("not implemented yet");
+    SolrServer solr = Registry.get(SolrServer.class);
+    JobSubmitter jobs = Registry.get(JobSubmitter.class);
+    return new EarthquakesDiscoveryRunner(loc, solr, jobs);
   }
 
   @Override
   public void validate(EarthquakesLocation loc) throws Exception {
-    // it is OK
+    // TODO: check that the URL is atom?
   }
 }

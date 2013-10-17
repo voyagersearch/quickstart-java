@@ -66,7 +66,7 @@ public class EarthquakesDiscoveryRunner extends ServiceDiscoveryRunner<Earthquak
       // Get the entry items...
       for (Entry item : feed.getEntries()) {
         SolrInputDocument doc = new SolrInputDocument();
-        doc.setField(DexField.ID.name, item.getId().toString()); // assuming this is globally unique
+        doc.setField(DexField.ID.name, item.getId().toString().replace(':', '_')); // assuming this is globally unique
         doc.setField(DexField.NAME.name, item.getTitle());
         doc.setField(DexField.CREATED.name, item.getPublished());
 
