@@ -1,7 +1,7 @@
 Voyager Java Quickstart
 ========================
 
-This purpose of this article is to provide simple examples of extending Voyager with Java.
+This purpose of this project is to provide simple examples of extending Voyager with Java.
 
  * [Custom Extractors and mimetypes](docs/extractors.md)
  * [Working with DiscoveryJobs](docs/discoveryjob.md)
@@ -9,13 +9,14 @@ This purpose of this article is to provide simple examples of extending Voyager 
  * [Direct Solr Access](docs/solr.md)
  * [Custom Locations](docs/locations.md)
 
-Some general information about Voyager:
+JVM Requirements:
 
-Voyager runs on Java 1.7+
+  * Voyager runs on Java 1.7+
+  * The Oracle JVMs have been tested successfully. Other JVMs have are untested and their viability is unknown. 
+  * Check [Lucene JavaBugs](http://wiki.apache.org/lucene-java/JavaBugs) before deciding a deployment JVM.
 
-The Oracle JVMs have been tested successfully. Other JVMs have are untested and their viability is unknown. 
-
-Check [Lucene JavaBugs](http://wiki.apache.org/lucene-java/JavaBugs) before deciding a deployment JVM.
+System Requirements:
+  * This project uses [Apache Ant](http://ant.apache.org/)
 
 
 Getting Started
@@ -49,7 +50,7 @@ to change this, set the `voyager.url` system property:
 
 Quickstart Distribution
 -----------------------
-This file is included in the standard Voyager download.  The version info is listed below:
+This file is included in the standard Voyager [download](http://voyagersearch.com/download).  The version info is listed below:
 <pre>
 Original Source: 
 https://github.com/voyagersearch/quickstart-java.git
