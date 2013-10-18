@@ -44,7 +44,7 @@ public class MyFolderLocationFactory implements LocationFactory<MyFolderLocation
   public DiscoveryRunner<?> newRunner(MyFolderLocation loc, boolean delta) throws IOException {
     SolrServer solr = Registry.get(SolrServer.class);
     JobSubmitter jobs = Registry.get(JobSubmitter.class);
-    return new MyFolderDiscoveryRunner(loc, solr, jobs);
+    return new MyFolderRunner(loc, solr, jobs);
   }
 
   @Override

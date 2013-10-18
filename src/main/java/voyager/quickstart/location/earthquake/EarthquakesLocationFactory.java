@@ -45,7 +45,7 @@ public class EarthquakesLocationFactory implements LocationFactory<EarthquakesLo
   public DiscoveryRunner<?> newRunner(EarthquakesLocation loc, boolean delta) throws IOException {
     SolrServer solr = Registry.get(SolrServer.class);
     JobSubmitter jobs = Registry.get(JobSubmitter.class);
-    return new EarthquakesDiscoveryRunner(loc, solr, jobs);
+    return new EarthquakesRunner(loc, solr, jobs);
   }
 
   @Override

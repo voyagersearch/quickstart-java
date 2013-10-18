@@ -28,11 +28,11 @@ import org.apache.abdera.parser.Parser;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class EarthquakesDiscoveryRunner extends BaseDiscoveryRunner<EarthquakesLocation> {
+public class EarthquakesRunner extends BaseDiscoveryRunner<EarthquakesLocation> {
   private static Abdera abdera = null;
-  static final Logger log = LoggerFactory.getLogger(EarthquakesDiscoveryRunner.class);
+  static final Logger log = LoggerFactory.getLogger(EarthquakesRunner.class);
   
-  public EarthquakesDiscoveryRunner( EarthquakesLocation loc, SolrServer solr, JobSubmitter jobs) {
+  public EarthquakesRunner( EarthquakesLocation loc, SolrServer solr, JobSubmitter jobs) {
     super(loc, solr, jobs);
   }
 

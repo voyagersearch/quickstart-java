@@ -7,10 +7,10 @@ import org.slf4j.LoggerFactory;
 import voyager.api.discovery.jobs.JobSubmitter;
 import voyager.discovery.location.BaseDiscoveryRunner;
 
-public class MyFolderDiscoveryRunner extends BaseDiscoveryRunner<MyFolderLocation> {
-  static final Logger log = LoggerFactory.getLogger(MyFolderDiscoveryRunner.class);
+public class MyFolderRunner extends BaseDiscoveryRunner<MyFolderLocation> {
+  static final Logger log = LoggerFactory.getLogger(MyFolderRunner.class);
   
-  public MyFolderDiscoveryRunner( MyFolderLocation loc, SolrServer solr, JobSubmitter jobs) {
+  public MyFolderRunner( MyFolderLocation loc, SolrServer solr, JobSubmitter jobs) {
     super(loc, solr, jobs);
   }
 
