@@ -3,10 +3,10 @@ Voyager Java Quickstart
 
 This purpose of this project is to provide simple examples of extending Voyager with Java.
 
- * [Custom Extractors and mimetypes](docs/extractors.md)
+ * [Query Voyager](docs/query.md)
+ * [Custom Extractors and Mimetypes](docs/extractors.md)
  * [Working with DiscoveryJobs](docs/discoveryjob.md)
  * [REST API Access](docs/rest.md)
- * [Direct Solr Access](docs/solr.md)
  * [Custom Locations](docs/locations.md)
 
 JVM Requirements:
