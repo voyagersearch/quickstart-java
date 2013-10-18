@@ -136,7 +136,7 @@
       <formatter type="xml" />
       <batchtest todir="${test.dir}/integration">
         <fileset dir="${src.tests}">
-          <exclude name="**/IntegrationTest.java" />
+          <include name="**/*IntegrationTest.java" />
         </fileset>
       </batchtest>
     </junit>
