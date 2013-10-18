@@ -63,6 +63,8 @@ Version:
 https://github.com/voyagersearch/quickstart-java/commit/@githash@
 </pre>
 
+[![githalytics.com alpha](https://cruel-carlota.pagodabox.com/e55e0f6daf4839eb6f8277cfbbd994e5 "githalytics.com")](http://githalytics.com/voyagersearch/quickstart-java)
+
 
 
 
