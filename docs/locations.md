@@ -40,6 +40,7 @@ If custom locations are registered, a new tab will appear in the ``manage/discov
 Selecting the location type will allow easily registering the location configuration. 
 
 
+![locations](imgs/custom_locations_in_ui.png)
 
 
 
