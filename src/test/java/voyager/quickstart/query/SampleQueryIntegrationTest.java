@@ -3,9 +3,7 @@ package voyager.quickstart.query;
 import java.net.URL;
 
 import org.apache.abdera.Abdera;
-import org.apache.abdera.ext.geo.Coordinate;
 import org.apache.abdera.ext.geo.GeoHelper;
-import org.apache.abdera.ext.geo.Point;
 import org.apache.abdera.ext.geo.Position;
 import org.apache.abdera.model.Document;
 import org.apache.abdera.model.Entry;
@@ -19,7 +17,6 @@ import org.apache.solr.common.SolrDocumentList;
 import org.junit.Test;
 
 import voyager.api.domain.model.entry.DexField;
-import voyager.api.domain.model.entry.EntryExtent;
 import voyager.quickstart.BaseIntegrationTest;
 
 /**
