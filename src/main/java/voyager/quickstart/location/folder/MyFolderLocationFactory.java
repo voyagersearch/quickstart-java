@@ -7,6 +7,7 @@ import org.apache.solr.client.solrj.SolrServer;
 
 import voyager.api.discovery.DiscoveryRunner;
 import voyager.api.discovery.jobs.JobSubmitter;
+import voyager.api.discovery.location.Location;
 import voyager.api.discovery.location.LocationFactory;
 import voyager.api.discovery.location.service.ServiceLocation;
 import voyager.common.util.Registry;
@@ -53,7 +54,7 @@ public class MyFolderLocationFactory implements LocationFactory<MyFolderLocation
       throw new IllegalArgumentException("Missing Path");
     }
     if(Strings.isNullOrEmpty(loc.getId())) {
-      loc.setId(ServiceLocation.getLocationHash(loc.getPath()));
+      loc.setId(Location.getLocationHash(loc.getPath()));
     }
   }
 }
