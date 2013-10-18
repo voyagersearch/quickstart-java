@@ -1,2 +1,4 @@
-# Register each location type
+# Register each location factory
 voyager.quickstart.location.earthquake.EarthquakesLocationFactory
+voyager.quickstart.location.folder.MyFolderLocationFactory
+

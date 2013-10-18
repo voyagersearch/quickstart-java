@@ -6,11 +6,13 @@ import java.net.URISyntaxException;
 
 import org.apache.solr.client.solrj.SolrServer;
 
+import com.google.common.base.Strings;
 import com.google.common.base.Throwables;
 
 import voyager.api.discovery.DiscoveryRunner;
 import voyager.api.discovery.jobs.JobSubmitter;
 import voyager.api.discovery.location.LocationFactory;
+import voyager.api.discovery.location.service.ServiceLocation;
 import voyager.common.util.Registry;
 
 public class EarthquakesLocationFactory implements LocationFactory<EarthquakesLocation> {
@@ -48,6 +50,13 @@ public class EarthquakesLocationFactory implements LocationFactory<EarthquakesLo
 
   @Override
   public void validate(EarthquakesLocation loc) throws Exception {
-    // TODO: check that the URL is atom?
+    if(loc.getURI()==null) {
+      throw new IllegalArgumentException("Missing URI");
+    }
+    if(Strings.isNullOrEmpty(loc.getId())) {
+      loc.setId(ServiceLocation.getIdForURI(loc.getURI()));
+    }
+    // TODO: check that the URL is actually atom...
+    // TODO: set the name from the atom feed?
   }
 }

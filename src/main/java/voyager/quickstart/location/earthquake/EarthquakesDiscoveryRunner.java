@@ -13,7 +13,7 @@ import voyager.api.discovery.jobs.JobSubmitter;
 import voyager.api.domain.model.entry.DexField;
 import voyager.api.domain.model.entry.EntryExtent;
 import voyager.discovery.ConvertToSearchableDocument;
-import voyager.discovery.location.service.ServiceDiscoveryRunner;
+import voyager.discovery.location.BaseDiscoveryRunner;
 
 import org.apache.abdera.ext.geo.Coordinate;
 import org.apache.abdera.ext.geo.GeoHelper;
@@ -28,7 +28,7 @@ import org.apache.abdera.parser.Parser;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class EarthquakesDiscoveryRunner extends ServiceDiscoveryRunner<EarthquakesLocation> {
+public class EarthquakesDiscoveryRunner extends BaseDiscoveryRunner<EarthquakesLocation> {
   private static Abdera abdera = null;
   static final Logger log = LoggerFactory.getLogger(EarthquakesDiscoveryRunner.class);
   
