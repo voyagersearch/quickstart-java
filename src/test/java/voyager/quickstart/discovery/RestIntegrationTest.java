@@ -14,12 +14,12 @@ import org.junit.Test;
 import voyager.api.discovery.jobs.DiscoveryJob;
 import voyager.api.domain.model.entry.DexField;
 import voyager.api.infrastructure.json.JSONObject;
-import voyager.quickstart.BaseIntegrationTest;
+import voyager.quickstart.IntegrationBase;
 
 /**
  * This test hits a live Voyager HTTP Server
  */
-public class RestIntegrationTest extends BaseIntegrationTest {
+public class RestIntegrationTest extends IntegrationBase {
   
   @Test
   public void testGetDiscoveryStatus() throws Exception 

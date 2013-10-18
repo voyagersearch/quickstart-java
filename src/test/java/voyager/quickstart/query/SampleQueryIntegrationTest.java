@@ -17,14 +17,14 @@ import org.apache.solr.common.SolrDocumentList;
 import org.junit.Test;
 
 import voyager.api.domain.model.entry.DexField;
-import voyager.quickstart.BaseIntegrationTest;
+import voyager.quickstart.IntegrationBase;
 
 /**
  * TODO: theses tests need to make sure something is in the index
  * so we can assert that the queries work.  For now they simply 
  * show the plumbing
  */
-public class SampleQueryIntegrationTest extends BaseIntegrationTest {
+public class SampleQueryIntegrationTest extends IntegrationBase {
 
   /**
    * A simple sample using solrj

@@ -11,11 +11,11 @@ import org.junit.Before;
 /**
  * Integration test requires a running Voyager instance
  */
-public abstract class BaseIntegrationTest {
+public abstract class IntegrationBase {
 
   protected String baseURL;
-  protected DefaultHttpClient httpclient;
   protected SolrServer solr;
+  protected DefaultHttpClient httpclient;
   
   @Before
   public void initClient()
