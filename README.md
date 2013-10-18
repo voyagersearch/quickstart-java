@@ -55,11 +55,18 @@ Running Samples from Eclipse
 This includes an eclipse project where the classpath is registered based on the variable ```VOYAGER_DIR```.  
 Set an [Eclipse Classpath Variable](http://help.eclipse.org/juno/index.jsp?topic=%2Forg.eclipse.jdt.doc.user%2Freference%2Fpreferences%2Fjava%2Fbuildpath%2Fref-preferences-classpath-variables.htm) to ```VOYAGER_DIR=c:\voyager\server_1.9```
 
-1. Right click on the project to configure the build path:
-![build path](docs/imgs/eclipse_1_configure_build_path.png)
 
-2. Configure your variable
-![variable](docs/imgs/eclipse_2_set_variable.png)
+   Right click on the project to configure the build path:
+   
+   
+   ![build path](docs/imgs/eclipse_1_configure_build_path.png)
+
+
+
+   Configure your variable:
+   
+   
+   ![variable](docs/imgs/eclipse_2_set_variable.png)
 
 
 
