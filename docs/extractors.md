@@ -16,7 +16,7 @@ The basic behavior is tested in [SimpleTextExtractorTest.java]
 
 Register ExtractorFactory
 -------------------------
-Each extractor needs a factory registed with the [Java ServiceLoader](http://docs.oracle.com/javase/6/docs/api/java/util/ServiceLoader.html)
+Each extractor needs a factory registered with the [Java ServiceLoader](http://docs.oracle.com/javase/6/docs/api/java/util/ServiceLoader.html)
 
 In this example, we extend <code>AbstractJavaExtractorFactory</code> and create [SimpleTextExtractorFactory.java].  
 This class is noted in [META-INF/services/voyager.api.discovery.extractor.ExtractionWorkerInfo](../src/main/resources/META-INF/services/voyager.api.discovery.extractor.ExtractionWorkerInfo).
