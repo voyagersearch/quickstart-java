@@ -38,6 +38,7 @@ public class MyFolderLocationFactory implements LocationFactory<MyFolderLocation
     catch(Exception ex) {
       Throwables.propagate(ex);
     }
+    loc.setKeywords(new String[] {"aaa", "bbb", "ccc"});
     return loc;
   }
 

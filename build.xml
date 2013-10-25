@@ -81,11 +81,15 @@
         destdir="${build.dir}" 
         includeAntRuntime="false"
         classpathref="compile.classpath"
+        source="1.7"
+        target="1.7"
         debug="true"/>
     <javac
         srcdir="${src.tests}"
         destdir="${test.dir}/bin" 
         includeAntRuntime="false"
+        source="1.7"
+        target="1.7"
         classpathref="compile.test.classpath"
         debug="true"/>
     <copy todir="${build.dir}">
