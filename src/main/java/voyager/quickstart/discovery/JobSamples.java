@@ -174,6 +174,13 @@ public class JobSamples {
     link.setRelation("data");
     entry.addLink(link);
     
+    link = new EntryLink();
+    link.setName("JPL WMS Server");
+    link.setFormat(VoyagerMimeTypes.WMS);
+    link.setPath("http://wms.jpl.nasa.gov/wms.cgi");
+    link.setRelation("data");
+    entry.addLink(link);
+    
     return job;
   }
   
