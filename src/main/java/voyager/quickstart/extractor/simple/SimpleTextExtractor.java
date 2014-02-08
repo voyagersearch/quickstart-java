@@ -50,7 +50,7 @@ public class SimpleTextExtractor extends HttpEnabledExtractor<Entry>
       }
       
       // Set a date field
-      entry.setField(DexField.META_MODIFIED_DATE, new Date());
+      entry.setField(DexField.MODIFIED, new Date());
     }
     catch(Exception ex) {
       entry.addErrorMessage(new DiscoveryError("Error reading file", ex));
