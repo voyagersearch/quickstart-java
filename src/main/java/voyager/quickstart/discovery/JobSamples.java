@@ -177,6 +177,45 @@ public class JobSamples {
     return job;
   }
   
+
+  public static DiscoveryJob makeAddRecordTreeAndExtract()
+  {
+    DiscoveryJob job = new DiscoveryJob();
+    job.setAction(DiscoveryAction.ADD);
+    job.setId("tree_and_extract");
+    
+    Entry entry = new Entry();
+    entry.setField(DexField.NAME, "Tree Root");
+    entry.setField(DexField.ABSTRACT, "some longer text about what we have");
+    job.setEntry(entry);
+
+    Entry sub = new Entry();
+    sub.setIndex(false); // this will not get its own entry in the index
+    sub.setField(DexField.NAME, "Sub 1");
+    sub.setField(DexField.FORMAT, VoyagerMimeTypes.FOLDER);
+    entry.addChild(sub);
+    
+    File docs = getDocsFolder();
+    Entry e1 = new Entry();
+    e1.setName("The Links PNG");
+    e1.setField( DexField.FORMAT, "image/png");
+    e1.setField( DexField.TITLE, "Some Title From the Job");
+    e1.setPath(new File(docs,"imgs/links.png").getAbsolutePath());
+    e1.setField(DexField.TO_EXTRACT, true);
+    sub.addChild(e1);
+    
+    e1 = new Entry();
+    e1.setName("A Structure PNG");
+    e1.setField( DexField.ABSTRACT, "an abstract field");
+    e1.setPath(new File(docs,"imgs/structure.png").getAbsolutePath());
+    e1.setField(DexField.TO_EXTRACT, true);
+    sub.addChild(e1);
+    
+    return job;
+  }
+  
+  
+  
   public static void write(PrintStream out) throws Exception
   {
 
@@ -228,6 +267,14 @@ public class JobSamples {
     out.println( "```" );
     out.println( "Links are displayed in the ui as:");
     out.println( "\n![structure](imgs/links.png)\n");
+    
+
+    out.println("\n## Entry with structure and child documents get indexed");
+    out.println("When you add the '"+DexField.TO_EXTRACT.name+"', field, the child items are added to the extraction queue.");
+    out.println( "\n```json" );
+    out.println( makeAddRecordTreeAndExtract().toPrettyJSON() );
+    out.println( "```" );
+    out.println( "After extraction, all fields configured by the parent will exist in the child.");
   }
   
   
