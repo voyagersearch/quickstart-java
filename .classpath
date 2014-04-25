@@ -7,328 +7,343 @@
 	<classpathentry kind="var" path="VOYAGER_DIR/dev/java/lib/hamcrest-core-1.1.jar"/>
 	<classpathentry kind="var" path="VOYAGER_DIR/dev/java/lib/mockito-core-1.9.5.jar"/>
 
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/JavaAPIforKml-2.2.0.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/Saxon-HE-9.5.1-4.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/abdera-client-1.1.3.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/abdera-core-1.1.3.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/abdera-extensions-geo-1.1.3.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/abdera-extensions-html-1.1.3.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/abdera-extensions-json-1.1.3.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/abdera-extensions-main-1.1.3.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/abdera-extensions-media-1.1.3.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/abdera-extensions-opensearch-1.1.3.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/abdera-i18n-1.1.3.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/abdera-parser-1.1.3.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/abdera-server-1.1.3.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/activation-1.1.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/antlr-runtime-3.5.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/aopalliance-1.0.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/apache-mime4j-0.6.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/apache-mime4j-core-0.7.2.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/apache-mime4j-dom-0.7.2.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/asm-4.1.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/asm-commons-4.1.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/asm-debug-all-4.1.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/axiom-api-1.2.14.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/axiom-impl-1.2.14.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/bcmail-jdk16-1.46.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/bcprov-jdk16-1.46.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/cglib-nodep-2.1_3.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/comfyj-2.9.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/common-2.6.0.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/commons-beanutils-1.8.3.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/commons-cli-1.2.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/commons-codec-1.8.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/commons-collections-3.2.1.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/commons-compress-1.4.1.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/commons-configuration-1.6.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/commons-dbcp-1.2.2.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/commons-digester-1.8.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/commons-fileupload-1.2.1.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/commons-httpclient-3.1.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/commons-io-1.4.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/commons-jxpath-1.3.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/commons-lang-2.6.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/commons-logging-1.0.4.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/commons-net-3.2.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/commons-pool-1.5.4.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/commons-validator-1.4.0.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/commons-vfs2-2.1-r1440250M.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/concurrentlinkedhashmap-lru-1.2.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/cors-filter-1.8.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/csvjdbc-1.0.16.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/ddmsence-2.2.0.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/dom4j-1.6.1.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/ecore-2.6.1.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/el-api-1.0.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/JavaAPIforKml-2.2.0.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/Saxon-HE-9.5.1-5.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/abdera-client-1.1.3.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/abdera-core-1.1.3.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/abdera-extensions-geo-1.1.3.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/abdera-extensions-html-1.1.3.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/abdera-extensions-json-1.1.3.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/abdera-extensions-main-1.1.3.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/abdera-extensions-media-1.1.3.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/abdera-extensions-opensearch-1.1.3.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/abdera-i18n-1.1.3.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/abdera-parser-1.1.3.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/abdera-server-1.1.3.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/activation-1.1.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/ant-1.9.3.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/ant-launcher-1.9.3.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/antlr-runtime-3.5.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/aopalliance-1.0.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/apache-mime4j-0.6.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/apache-mime4j-core-0.7.2.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/apache-mime4j-dom-0.7.2.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/asm-4.1.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/asm-commons-4.1.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/asm-debug-all-4.1.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/axiom-api-1.2.14.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/axiom-impl-1.2.14.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/bcmail-jdk14-138.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/bcmail-jdk16-1.46.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/bcprov-jdk14-138.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/bcprov-jdk16-1.46.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/buji-pac4j-1.2.2.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/cglib-nodep-2.1_3.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/comfyj-2.9.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/common-2.6.0.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/commons-beanutils-1.9.1.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/commons-cli-1.2.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/commons-codec-1.8.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/commons-collections-3.2.1.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/commons-compress-1.4.1.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/commons-configuration-1.6.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/commons-dbcp-1.2.2.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/commons-digester-1.8.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/commons-fileupload-1.2.1.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/commons-httpclient-3.1.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/commons-io-1.4.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/commons-jxpath-1.3.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/commons-lang-2.6.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/commons-lang3-3.1.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/commons-logging-1.0.4.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/commons-net-3.2.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/commons-pool-1.5.4.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/commons-validator-1.4.0.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/commons-vfs2-2.1-r1440250M.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/concurrentlinkedhashmap-lru-1.2.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/core-renderer-R8.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/cors-filter-1.8.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/csvjdbc-1.0.16.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/ddmsence-2.2.0.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/dom4j-1.6.1.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/ecore-2.6.1.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/el-api-1.0.jar" />
 ext
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/ezmorph-1.0.4.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/fontbox-1.8.4.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/geronimo-activation_1.1_spec-1.1.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/geronimo-stax-api_1.0_spec-1.0.1.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/gt-api-10.4.S1.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/gt-coverage-10.4.S1.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/gt-cql-10.4.S1.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/gt-csv-10.4.S1.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/gt-data-10.4.S1.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/gt-epsg-extension-10.4.S1.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/gt-epsg-hsql-10.4.S1.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/gt-epsg-wkt-10.4.S1.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/gt-graph-10.4.S1.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/gt-grid-10.4.S1.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/gt-jdbc-10.4.S1.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/gt-jdbc-oracle-10.4.S1.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/gt-jdbc-postgis-10.4.S1.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/gt-main-10.4.S1.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/gt-metadata-10.4.S1.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/gt-opengis-10.4.S1.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/gt-process-10.4.S1.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/gt-process-feature-10.4.S1.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/gt-process-raster-10.4.S1.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/gt-referencing-10.4.S1.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/gt-render-10.4.S1.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/gt-shapefile-10.4.S1.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/gt-vpf-10.4.S1.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/gt-wfs-10.4.S1.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/gt-xml-10.4.S1.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/gt-xsd-core-10.4.S1.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/gt-xsd-fes-10.4.S1.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/gt-xsd-filter-10.4.S1.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/gt-xsd-gml2-10.4.S1.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/gt-xsd-gml3-10.4.S1.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/gt-xsd-kml-10.4.S1.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/gt-xsd-ows-10.4.S1.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/gt-xsd-wfs-10.4.S1.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/guava-14.0.1.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/h2-1.3.155.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/hamcrest-core-1.3.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/hppc-0.5.2.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/hsqldb-1.8.0.7.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/htmlparser-1.0.5.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/httpclient-4.2.6.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/httpcore-4.2.5.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/httpmime-4.3.1.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/icepdf-core-5.0.3.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/icu4j-52.1.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/imageio-ext-tiff-1.1.7.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/imageio-ext-utilities-1.1.7.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/inmethod-grid-1.4.21.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/jackson-annotations-2.2.2.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/jackson-core-2.2.2.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/jackson-core-asl-1.8.5.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/jackson-databind-2.2.2.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/jackson-jaxrs-1.8.5.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/jackson-mapper-asl-1.8.5.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/jackson-xc-1.8.5.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/jai_codec-1.1.3.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/jai_core-1.1.3.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/jai_imageio-1.1.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/java-property-utils-1.9.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/javacsv-2.0.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/javassist-3.12.1.GA.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/javax.servlet-api-3.1.0.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/jaxb-api-2.2.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/jaxb-impl-2.2.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/jaxb-xjc-2.2.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/jaxen-1.1.1.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/jaxrs-api-2.2.2.GA.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/jboss-el-1.0_02.CR4.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/jcip-annotations-1.0.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/jcl-over-slf4j-1.7.5.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/jcr-1.0.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/jdom-1.1.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/jdom2-2.0.5.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/jempbox-1.8.4.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/jettison-1.2.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/jetty-http-9.1.2.v20140210.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/jetty-io-9.1.2.v20140210.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/jetty-jmx-9.1.2.v20140210.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/jetty-security-9.1.2.v20140210.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/jetty-server-9.1.2.v20140210.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/jetty-servlet-9.1.2.v20140210.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/jetty-util-9.1.2.v20140210.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/jetty-webapp-9.1.2.v20140210.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/jetty-xml-9.1.2.v20140210.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/jgridshift-1.0.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/jhighlight-1.0.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/jna-4.0.0.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/jna-platform-4.0.0.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/jniwrap-3.8.4.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/joda-time-1.6.2.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/jsch-0.1.48.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/json-lib-2.2.2-jdk15.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/jsoup-1.7.3.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/jsqlparser-0.8.0.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/jsr-275-1.0-beta-2.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/jsr250-api-1.0.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/jt-attributeop-1.3.1.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/jt-contour-1.3.1.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/jt-rangelookup-1.3.1.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/jt-utils-1.3.1.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/jt-vectorize-1.3.1.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/jt-zonalstats-1.3.1.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/jtds-1.3.1.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/jts-1.13.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/jul-to-slf4j-1.7.5.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/junit-4.11.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/juniversalchardet-1.0.3.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/jxbrowser-3.3.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/jxfilewatcher-partial-1.3.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/jzmq-3.2.2.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/kryo-2.22.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/log4j-1.2.16.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/lucene-analyzers-common-4.7-r1566787M.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/lucene-analyzers-icu-4.7-r1566787M.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/lucene-analyzers-phonetic-4.7-r1566787M.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/lucene-analyzers-stempel-4.7-r1566787M.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/lucene-codecs-4.7-r1566787M.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/lucene-core-4.7-r1566787M.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/lucene-expressions-4.7-r1566787M.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/lucene-grouping-4.7-r1566787M.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/lucene-highlighter-4.7-r1566787M.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/lucene-join-4.7-r1566787M.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/lucene-memory-4.7-r1566787M.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/lucene-misc-4.7-r1566787M.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/lucene-queries-4.7-r1566787M.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/lucene-queryparser-4.7-r1566787M.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/lucene-spatial-4.7-r1566787M.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/lucene-suggest-4.7-r1566787M.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/mail-1.4.1.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/metadata-extractor-2.7.r0.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/metrics-core-3.0.1.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/metrics-healthchecks-3.0.1.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/metrics-json-3.0.1.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/metrics-jvm-3.0.1.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/metrics-servlets-3.0.1.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/misc-1.4.21.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/mockito-all-1.9.5.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/nekohtml-1.9.15.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/net.opengis.fes-10.4.S1.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/net.opengis.ows-10.4.S1.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/net.opengis.wfs-10.4.S1.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/noggit-0.5.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/ojdbc6-10.2.0.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/org.restlet-2.1.1.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/org.restlet.ext.servlet-2.1.1.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/org.w3.xlink-10.4.S1.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/oro-2.0.8.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/pdfbox-1.8.4.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/persistence-api-1.0.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/picocontainer-1.2.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/poi-3.10-beta2.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/poi-ooxml-3.10-beta2.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/poi-ooxml-schemas-3.10-beta2.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/poi-scratchpad-3.10-beta2.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/postgis-jdbc-1.3.3.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/postgis-stubs-1.3.3.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/postgresql-8.4-701.jdbc3.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/postgresql-9.2-1003-jdbc4.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/protobuf-java-2.5.0.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/proxy-vole-20121203.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/quartz-2.2.1.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/resteasy-jackson-provider-2.3.7.Final.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/resteasy-jaxb-provider-2.2.2.GA.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/resteasy-jaxrs-2.2.2.GA.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/resteasy-jettison-provider-2.2.2.GA.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/resteasy-links-2.3.7.Final.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/resteasy-multipart-provider-2.3.7.Final.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/resteasy-spring-2.2.2.GA.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/scannotation-1.0.3.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/sdoapi-1.0.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/sdoutl-1.0.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/servlet-api-2.5.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/shiro-core-1.2.2.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/shiro-web-1.2.2.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/sigar-1.6.4.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/sjsxp-1.0.1.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/slf4j-api-1.7.5.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/slf4j-log4j12-1.7.5.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/solr-analysis-extras-4.7-r1566787M.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/solr-core-4.7-r1566787M.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/solr-solrj-4.7-r1566787M.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/spatial4j-0.4.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/spring-aop-3.1.4.RELEASE.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/spring-asm-3.1.4.RELEASE.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/spring-beans-3.1.4.RELEASE.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/spring-context-3.1.4.RELEASE.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/spring-core-3.1.4.RELEASE.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/spring-expression-3.1.4.RELEASE.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/spring-web-3.1.4.RELEASE.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/sqljdbc4-4.0.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/sqlsheet-6.4.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/stax-api-1.0-2.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/stax2-api-3.1.1.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/tagsoup-1.2.1.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/tika-core-1.5.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/tika-parsers-1.5.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/tokenreplacer-1.3.2.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/truezip-driver-file-7.7.5.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/truezip-driver-http-7.7.5.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/truezip-driver-tar-7.7.5.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/truezip-driver-tzp-7.7.5.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/truezip-driver-zip-7.7.5.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/truezip-file-7.7.5.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/truezip-kernel-7.7.5.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/truezip-path-7.7.5.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/truezip-swing-7.7.5.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/vecmath-1.3.2.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/velocity-1.6.4.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/voyager-alerts-1.9.3-SNAPSHOT.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/voyager-api-1.9.3-SNAPSHOT.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/voyager-app-1.9.3-SNAPSHOT.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/voyager-bundle-server-1.9.3-SNAPSHOT.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/voyager-common-1.9.3-SNAPSHOT.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/voyager-desktop-1.9.3-SNAPSHOT.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/voyager-discovery-1.9.3-SNAPSHOT.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/voyager-exp-1.9.3-SNAPSHOT.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/voyager-extractor-geotools-1.9.3-SNAPSHOT.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/voyager-extractor-misc-1.9.3-SNAPSHOT.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/voyager-extractor-pdf-1.9.3-SNAPSHOT.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/voyager-extractor-services-1.9.3-SNAPSHOT.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/voyager-feed-1.9.3-SNAPSHOT.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/voyager-i18n-1.9.3-SNAPSHOT.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/voyager-i4j-1.9.3-SNAPSHOT.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/voyager-icons-1.9.3-SNAPSHOT.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/voyager-index-1.9.3-SNAPSHOT.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/voyager-jni-1.9.3-SNAPSHOT.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/voyager-launcher-1.9.3-SNAPSHOT.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/voyager-logging-1.9.3-SNAPSHOT.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/voyager-mapping-1.9.3-SNAPSHOT.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/voyager-plugin-csw-1.9.3-SNAPSHOT.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/voyager-plugin-fme-1.9.3-SNAPSHOT.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/voyager-plugin-map-studio-1.9.3-SNAPSHOT.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/voyager-processing-1.9.3-SNAPSHOT.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/voyager-rest-1.9.3-SNAPSHOT.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/voyager-security-1.9.3-SNAPSHOT.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/voyager-tasks-1.9.3-SNAPSHOT.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/voyager-wicket-1.9.3-SNAPSHOT.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/voyager-windows-1.9.3-SNAPSHOT.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/waffle-jna-1.6.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/wicket-1.4.21.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/wicket-datetime-1.4.21.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/wicket-devutils-1.4.21.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/wicket-extensions-1.4.21.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/wicket-ioc-1.4.21.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/wicket-jmx-1.4.21.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/wicket-shiro-1.4.21.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/wicket-spring-1.4.21.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/winpack-3.8.3.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/woodstox-core-asl-4.1.4.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/wstx-asl-3.2.6.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/xalan-2.7.0.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/xercesImpl-2.9.1.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/xml-apis-1.3.04.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/xml-commons-resolver-1.2.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/xmlbeans-2.3.0.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/xmlpull-1.1.3.1.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/xmpcore-5.1.2.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/xom-1.2.5.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/xpp3_min-1.1.4c.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/xsd-2.6.0.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/xstream-1.4.1.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/xulrunner15-windows-3.3.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/xz-1.4.jar" />
-	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/zookeeper-3.4.5.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/ezmorph-1.0.4.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/fontbox-1.8.4.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/gate-asm-3.1.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/gate-compiler-jdt-3.7.1.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/gate-core-7.1.R4485M.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/geronimo-activation_1.1_spec-1.1.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/geronimo-stax-api_1.0_spec-1.0.1.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/gt-api-10.4.S1.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/gt-coverage-10.4.S1.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/gt-cql-10.4.S1.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/gt-csv-10.4.S1.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/gt-data-10.4.S1.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/gt-epsg-extension-10.4.S1.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/gt-epsg-hsql-10.4.S1.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/gt-epsg-wkt-10.4.S1.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/gt-graph-10.4.S1.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/gt-grid-10.4.S1.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/gt-jdbc-10.4.S1.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/gt-jdbc-oracle-10.4.S1.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/gt-jdbc-postgis-10.4.S1.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/gt-main-10.4.S1.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/gt-metadata-10.4.S1.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/gt-opengis-10.4.S1.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/gt-process-10.4.S1.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/gt-process-feature-10.4.S1.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/gt-process-raster-10.4.S1.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/gt-referencing-10.4.S1.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/gt-render-10.4.S1.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/gt-shapefile-10.4.S1.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/gt-vpf-10.4.S1.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/gt-wfs-10.4.S1.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/gt-xml-10.4.S1.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/gt-xsd-core-10.4.S1.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/gt-xsd-fes-10.4.S1.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/gt-xsd-filter-10.4.S1.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/gt-xsd-gml2-10.4.S1.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/gt-xsd-gml3-10.4.S1.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/gt-xsd-kml-10.4.S1.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/gt-xsd-ows-10.4.S1.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/gt-xsd-wfs-10.4.S1.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/guava-14.0.1.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/h2-1.3.155.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/hamcrest-core-1.3.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/hppc-0.5.2.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/hsqldb-1.8.0.7.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/htmlparser-1.0.5.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/httpclient-4.2.6.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/httpcore-4.2.5.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/httpmime-4.3.1.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/icepdf-core-5.0.3.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/icu4j-52.1.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/imageio-ext-tiff-1.1.7.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/imageio-ext-utilities-1.1.7.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/inmethod-grid-1.4.21.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/itext-2.0.8.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/ivy-2.3.0.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/jackson-annotations-2.2.2.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/jackson-core-2.2.2.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/jackson-core-asl-1.8.5.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/jackson-databind-2.2.2.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/jackson-jaxrs-1.8.5.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/jackson-mapper-asl-1.8.5.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/jackson-xc-1.8.5.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/jai_codec-1.1.3.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/jai_core-1.1.3.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/jai_imageio-1.1.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/java-property-utils-1.9.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/javacsv-2.0.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/javassist-3.12.1.GA.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/javax.servlet-api-3.1.0.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/jaxb-api-2.2.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/jaxb-impl-2.2.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/jaxb-xjc-2.2.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/jaxen-1.1.1.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/jaxrs-api-2.2.2.GA.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/jboss-el-1.0_02.CR4.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/jcip-annotations-1.0.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/jcl-over-slf4j-1.7.5.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/jcr-1.0.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/jdom-1.1.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/jdom2-2.0.5.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/jempbox-1.8.4.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/jettison-1.2.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/jetty-http-9.1.3.v20140225.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/jetty-io-9.1.3.v20140225.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/jetty-jmx-9.1.3.v20140225.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/jetty-security-9.1.3.v20140225.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/jetty-server-9.1.3.v20140225.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/jetty-servlet-9.1.3.v20140225.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/jetty-util-9.1.3.v20140225.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/jetty-webapp-9.1.3.v20140225.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/jetty-xml-9.1.3.v20140225.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/jgridshift-1.0.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/jhighlight-1.0.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/jitar-0.1.0.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/jna-4.1.0.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/jna-platform-4.1.0.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/jniwrap-3.8.4.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/joda-time-1.6.2.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/jsch-0.1.48.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/json-lib-2.2.2-jdk15.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/jsoup-1.7.3.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/jsqlparser-0.8.0.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/jsr-275-1.0-beta-2.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/jsr250-api-1.0.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/jt-attributeop-1.3.1.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/jt-contour-1.3.1.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/jt-rangelookup-1.3.1.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/jt-utils-1.3.1.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/jt-vectorize-1.3.1.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/jt-zonalstats-1.3.1.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/jtds-1.3.1.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/jts-1.13.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/jul-to-slf4j-1.7.5.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/junit-4.11.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/juniversalchardet-1.0.3.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/jxbrowser-4.3.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/jxbrowser-win-4.3.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/jxfilewatcher-partial-1.3.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/jzmq-3.2.2.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/kryo-2.22.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/log4j-1.2.16.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/lucene-analyzers-common-4.8-r1578550M.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/lucene-analyzers-icu-4.8-r1578550M.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/lucene-analyzers-phonetic-4.8-r1578550M.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/lucene-analyzers-stempel-4.8-r1578550M.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/lucene-codecs-4.8-r1578550M.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/lucene-core-4.8-r1578550M.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/lucene-expressions-4.8-r1578550M.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/lucene-grouping-4.8-r1578550M.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/lucene-highlighter-4.8-r1578550M.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/lucene-join-4.8-r1578550M.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/lucene-memory-4.8-r1578550M.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/lucene-misc-4.8-r1578550M.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/lucene-queries-4.8-r1578550M.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/lucene-queryparser-4.8-r1578550M.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/lucene-spatial-4.8-r1578550M.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/lucene-suggest-4.8-r1578550M.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/mail-1.4.1.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/metadata-extractor-2.7.r0.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/metrics-core-3.0.2.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/metrics-healthchecks-3.0.2.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/metrics-json-3.0.2.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/metrics-jvm-3.0.2.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/metrics-servlets-3.0.2.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/misc-1.4.21.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/mockito-all-1.9.5.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/nekohtml-1.9.15.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/net.opengis.fes-10.4.S1.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/net.opengis.ows-10.4.S1.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/net.opengis.wfs-10.4.S1.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/noggit-0.5.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/ojdbc6-10.2.0.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/opensextant-2.0Rca97M2.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/opensextant-toolbox-2.0Rca97M.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/org.restlet-2.1.1.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/org.restlet.ext.servlet-2.1.1.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/org.w3.xlink-10.4.S1.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/oro-2.0.8.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/pac4j-core-1.5.0.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/pdfbox-1.8.4.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/persistence-api-1.0.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/picocontainer-1.2.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/poi-3.10-beta2.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/poi-ooxml-3.10-beta2.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/poi-ooxml-schemas-3.10-beta2.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/poi-scratchpad-3.10-beta2.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/postgis-jdbc-1.3.3.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/postgis-stubs-1.3.3.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/postgresql-8.4-701.jdbc3.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/postgresql-9.2-1003-jdbc4.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/protobuf-java-2.5.0.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/proxy-vole-20121203.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/quartz-2.2.1.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/resteasy-jackson-provider-2.3.7.Final.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/resteasy-jaxb-provider-2.2.2.GA.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/resteasy-jaxrs-2.2.2.GA.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/resteasy-jettison-provider-2.2.2.GA.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/resteasy-links-2.3.7.Final.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/resteasy-multipart-provider-2.3.7.Final.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/resteasy-spring-2.2.2.GA.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/scannotation-1.0.3.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/sdoapi-1.0.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/sdoutl-1.0.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/servlet-api-2.5.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/shiro-core-1.2.3.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/shiro-web-1.2.3.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/sigar-1.6.4.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/sjsxp-1.0.1.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/slf4j-api-1.7.5.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/slf4j-log4j12-1.7.5.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/solr-analysis-extras-4.8-r1578550M.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/solr-core-4.8-r1578550M.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/solr-solrj-4.8-r1578550M.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/solr-text-tagger-1.3Re2f6M.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/spatial4j-0.4.1.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/spring-aop-3.1.4.RELEASE.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/spring-asm-3.1.4.RELEASE.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/spring-beans-3.1.4.RELEASE.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/spring-context-3.1.4.RELEASE.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/spring-core-3.1.4.RELEASE.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/spring-expression-3.1.4.RELEASE.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/spring-web-3.1.4.RELEASE.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/sqljdbc4-4.0.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/sqlsheet-6.4.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/stax-api-1.0-2.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/stax2-api-3.1.1.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/tagsoup-1.2.1.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/tika-core-1.5.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/tika-parsers-1.5.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/tokenreplacer-1.3.2.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/truezip-driver-file-7.7.6.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/truezip-driver-http-7.7.6.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/truezip-driver-tar-7.7.6.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/truezip-driver-tzp-7.7.6.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/truezip-driver-zip-7.7.6.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/truezip-file-7.7.6.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/truezip-kernel-7.7.6.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/truezip-path-7.7.6.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/truezip-swing-7.7.6.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/vecmath-1.3.2.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/velocity-1.6.4.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/voyager-alerts-1.9.3-SNAPSHOT.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/voyager-api-1.9.3-SNAPSHOT.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/voyager-app-1.9.3-SNAPSHOT.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/voyager-bundle-server-1.9.3-SNAPSHOT.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/voyager-common-1.9.3-SNAPSHOT.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/voyager-desktop-1.9.3-SNAPSHOT.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/voyager-discovery-1.9.3-SNAPSHOT.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/voyager-exp-1.9.3-SNAPSHOT.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/voyager-extractor-geotools-1.9.3-SNAPSHOT.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/voyager-extractor-misc-1.9.3-SNAPSHOT.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/voyager-extractor-pdf-1.9.3-SNAPSHOT.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/voyager-extractor-services-1.9.3-SNAPSHOT.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/voyager-feed-1.9.3-SNAPSHOT.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/voyager-i18n-1.9.3-SNAPSHOT.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/voyager-i4j-1.9.3-SNAPSHOT.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/voyager-icons-1.9.3-SNAPSHOT.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/voyager-index-1.9.3-SNAPSHOT.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/voyager-jni-1.9.3-SNAPSHOT.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/voyager-launcher-1.9.3-SNAPSHOT.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/voyager-logging-1.9.3-SNAPSHOT.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/voyager-mapping-1.9.3-SNAPSHOT.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/voyager-plugin-csw-1.9.3-SNAPSHOT.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/voyager-plugin-fme-1.9.3-SNAPSHOT.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/voyager-plugin-map-studio-1.9.3-SNAPSHOT.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/voyager-rest-1.9.3-SNAPSHOT.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/voyager-security-1.9.3-SNAPSHOT.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/voyager-wicket-1.9.3-SNAPSHOT.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/waffle-jna-1.6.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/wicket-1.4.21.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/wicket-datetime-1.4.21.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/wicket-devutils-1.4.21.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/wicket-extensions-1.4.21.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/wicket-ioc-1.4.21.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/wicket-jmx-1.4.21.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/wicket-shiro-1.4.21.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/wicket-spring-1.4.21.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/winpack-3.8.3.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/woodstox-core-asl-4.1.4.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/wstx-asl-3.2.6.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/xalan-2.7.0.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/xercesImpl-2.9.1.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/xml-apis-1.3.04.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/xml-commons-resolver-1.2.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/xmlbeans-2.3.0.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/xmlpull-1.1.3.1.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/xmpcore-5.1.2.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/xom-1.2.5.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/xpp3_min-1.1.4c.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/xsd-2.6.0.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/xstream-1.4.1.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/xz-1.4.jar" />
+<classpathentry kind="var" path="VOYAGER_DIR/app/lib/zookeeper-3.4.5.jar" />
+
 
 	<classpathentry kind="var" path="VOYAGER_DIR"/>
 	<classpathentry kind="output" path="bin"/>
