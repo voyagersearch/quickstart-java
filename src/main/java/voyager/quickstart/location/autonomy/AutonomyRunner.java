@@ -43,7 +43,10 @@ public class AutonomyRunner extends BaseDiscoveryRunner<AutonomyLocation> {
     int start = 0;
     final AutonomyXMLReader reader = new AutonomyXMLReader();
     while(!isStopRequested()) {
-      InputStream stream = AutonomyLocationTest.class.getResourceAsStream("sample_0.xml");
+      InputStream stream = null;//
+      if(stream==null) {
+        break; //AutonomyLocationTest.class.getResourceAsStream("sample_0.xml");
+      }
       XdmNode doc = reader.read(stream);
 
       final AutnHit hit = new AutnHit();
@@ -66,7 +69,7 @@ public class AutonomyRunner extends BaseDiscoveryRunner<AutonomyLocation> {
       if(start>0) {
         break;
       }
-    }
+    } 
   }
   
   public Entry toEntry(AutnHit hit, XdmNode content) {

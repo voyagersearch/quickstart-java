@@ -29,15 +29,6 @@ public class AutonomyLocationFactory implements LocationFactory<AutonomyLocation
 
   @Override
   public AutonomyLocation newSampleInstance() {
-    // See others: http://earthquake.usgs.gov/earthquakes/feed/v1.0/atom.php
-    try {
-      AutonomyLocation loc = new AutonomyLocation();
-      loc.setURI(new URI("http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_day.atom"));
-      return loc;
-    }
-    catch(URISyntaxException ex) {
-      Throwables.propagate(ex);
-    }
     return null;
   }
 
