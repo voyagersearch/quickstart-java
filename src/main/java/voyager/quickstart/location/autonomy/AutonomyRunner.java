@@ -2,32 +2,53 @@ package voyager.quickstart.location.autonomy;
 
 import java.io.InputStream;
 import java.net.URI;
+import java.util.concurrent.atomic.AtomicInteger;
 
 import net.sf.saxon.s9api.Axis;
+import net.sf.saxon.s9api.SaxonApiException;
 import net.sf.saxon.s9api.XdmNode;
 import net.sf.saxon.s9api.XdmSequenceIterator;
 
+import org.apache.http.client.HttpClient;
 import org.apache.solr.client.solrj.SolrServer;
 import org.apache.solr.common.SolrInputDocument;
+import org.apache.solr.common.params.ModifiableSolrParams;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.google.common.base.Function;
+import com.google.common.base.Throwables;
 
 import voyager.api.discovery.jobs.JobSubmitter;
 import voyager.api.domain.model.entry.Entry;
 import voyager.api.domain.model.entry.EntryMeta;
 import voyager.api.error.DiscoveryError;
 import voyager.discovery.location.BaseDiscoveryRunner;
+import voyager.http.VoyagerHttpClient;
+import voyager.http.VoyagerHttpRequest;
 import voyager.quickstart.location.autonomy.bean.AutnHit;
 import voyager.quickstart.location.autonomy.bean.AutnResponseData;
 
 public class AutonomyRunner extends BaseDiscoveryRunner<AutonomyLocation> {
   
   static final Logger log = LoggerFactory.getLogger(AutonomyRunner.class);
+
+  final AutonomyXMLReader reader;
+  final XmlHttpParser parser;
   
   public AutonomyRunner( AutonomyLocation loc, SolrServer solr, JobSubmitter jobs) {
     super(loc, solr, jobs);
+  
+    AutonomyXMLReader r = null;
+    try {
+      r = new AutonomyXMLReader();
+    }
+    catch(SaxonApiException x) {
+      Throwables.propagate(x);
+    }
+    
+    reader = r;
+    parser = new XmlHttpParser(reader.builder);
   }
 
   //----------------------------------------------------
@@ -40,20 +61,25 @@ public class AutonomyRunner extends BaseDiscoveryRunner<AutonomyLocation> {
       throw new IllegalArgumentException("Missing URI");
     }
     
-    int start = 0;
-    final AutonomyXMLReader reader = new AutonomyXMLReader();
+    
+    VoyagerHttpRequest req = new VoyagerHttpRequest("https://voyagerdemo.com/Autonomy");
+    req.params = new ModifiableSolrParams();
+    req.params.set("MaxResults", 50); //
+    
+    final AtomicInteger count = new AtomicInteger(0);
+    int start = 1;
     while(!isStopRequested()) {
-      InputStream stream = null;//
-      if(stream==null) {
-        break; //AutonomyLocationTest.class.getResourceAsStream("sample_0.xml");
-      }
-      XdmNode doc = reader.read(stream);
+      req.params.set("Start", start); 
+      count.set(0);
+      
+      XdmNode doc = parser.parse(req, VoyagerHttpClient.getInstance()).doc;
 
       final AutnHit hit = new AutnHit();
       AutnResponseData d = reader.readResponse(doc, new Function<XdmNode, Void>() {
         @Override
         public Void apply(XdmNode node) {
           hit.reset();
+          count.incrementAndGet();
           XdmNode content = reader.fillHitContent(hit, node);
           try {
             addDoc( toEntry(hit, content) );
@@ -64,9 +90,13 @@ public class AutonomyRunner extends BaseDiscoveryRunner<AutonomyLocation> {
           return null;
         }
       });
-      start += d.numhits;
       
-      if(start>0) {
+      if(count.get()==0) {
+        break;
+      }
+      
+      start += count.get();
+      if(start>=d.numhits) {
         break;
       }
     } 

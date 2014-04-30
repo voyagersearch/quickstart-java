@@ -1,19 +1,16 @@
 package voyager.quickstart.location.autonomy;
 
 import java.io.IOException;
-import java.net.URI;
-import java.net.URISyntaxException;
 
 import org.apache.solr.client.solrj.SolrServer;
-
-import com.google.common.base.Strings;
-import com.google.common.base.Throwables;
 
 import voyager.api.discovery.DiscoveryRunner;
 import voyager.api.discovery.jobs.JobSubmitter;
 import voyager.api.discovery.location.LocationFactory;
 import voyager.api.discovery.location.service.ServiceLocation;
 import voyager.common.util.Registry;
+
+import com.google.common.base.Strings;
 
 public class AutonomyLocationFactory implements LocationFactory<AutonomyLocation> {
 
