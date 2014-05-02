@@ -1,6 +1,8 @@
 package voyager.quickstart.location.autonomy;
 
 import java.io.IOException;
+import java.net.URI;
+import java.net.URISyntaxException;
 
 import org.apache.solr.client.solrj.SolrServer;
 
@@ -11,6 +13,7 @@ import voyager.api.discovery.location.service.ServiceLocation;
 import voyager.common.util.Registry;
 
 import com.google.common.base.Strings;
+import com.google.common.base.Throwables;
 
 public class AutonomyLocationFactory implements LocationFactory<AutonomyLocation> {
 
@@ -26,7 +29,15 @@ public class AutonomyLocationFactory implements LocationFactory<AutonomyLocation
 
   @Override
   public AutonomyLocation newSampleInstance() {
-    return null;
+    AutonomyLocation a = new AutonomyLocation();
+    a.setName("A Nice Name");
+    try {
+      a.setURI(new URI("http://your-host-name-and-port/Autonomy"));
+    } 
+    catch (URISyntaxException e) {
+      Throwables.propagate(e);
+    }
+    return a;
   }
 
   @Override

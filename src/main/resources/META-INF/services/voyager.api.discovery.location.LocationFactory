@@ -1,4 +1,5 @@
 # Register each location factory
 voyager.quickstart.location.earthquake.EarthquakesLocationFactory
 voyager.quickstart.location.folder.MyFolderLocationFactory
+voyager.quickstart.location.autonomy.AutonomyLocationFactory
 

@@ -1,23 +1,23 @@
 package voyager.quickstart.location.autonomy;
 
 import java.io.InputStream;
+import java.io.StringReader;
 import java.net.URI;
 import java.util.concurrent.atomic.AtomicInteger;
+
+import javax.xml.transform.stream.StreamSource;
 
 import net.sf.saxon.s9api.Axis;
 import net.sf.saxon.s9api.SaxonApiException;
 import net.sf.saxon.s9api.XdmNode;
 import net.sf.saxon.s9api.XdmSequenceIterator;
 
-import org.apache.http.client.HttpClient;
+import org.apache.commons.io.IOUtils;
 import org.apache.solr.client.solrj.SolrServer;
 import org.apache.solr.common.SolrInputDocument;
 import org.apache.solr.common.params.ModifiableSolrParams;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-import com.google.common.base.Function;
-import com.google.common.base.Throwables;
 
 import voyager.api.discovery.jobs.JobSubmitter;
 import voyager.api.domain.model.entry.Entry;
@@ -25,9 +25,15 @@ import voyager.api.domain.model.entry.EntryMeta;
 import voyager.api.error.DiscoveryError;
 import voyager.discovery.location.BaseDiscoveryRunner;
 import voyager.http.VoyagerHttpClient;
+import voyager.http.VoyagerHttpException;
 import voyager.http.VoyagerHttpRequest;
+import voyager.http.XmlHttpParser;
+import voyager.http.XmlHttpResponse;
 import voyager.quickstart.location.autonomy.bean.AutnHit;
 import voyager.quickstart.location.autonomy.bean.AutnResponseData;
+
+import com.google.common.base.Function;
+import com.google.common.base.Throwables;
 
 public class AutonomyRunner extends BaseDiscoveryRunner<AutonomyLocation> {
   
@@ -48,7 +54,25 @@ public class AutonomyRunner extends BaseDiscoveryRunner<AutonomyLocation> {
     }
     
     reader = r;
-    parser = new XmlHttpParser(reader.builder);
+    parser = new XmlHttpParser(reader.builder) {
+
+      @Override
+      public XmlHttpResponse parse(VoyagerHttpRequest req, InputStream input, String contentType, String encoding) throws VoyagerHttpException {
+        XmlHttpResponse rsp = new XmlHttpResponse();
+        try {
+          // HACK HACK HACK!
+          // we are just fixing the XML so it has an autonomy response
+          // hopefully a real service advertises real headers
+          String xml = IOUtils.toString(input);
+          xml = xml.replaceFirst("<autnresponse>", "<autnresponse xmlns:autn=\"http://schemas.autonomy.com/aci/\">");
+          rsp.doc = builder.build(new StreamSource(new StringReader(xml)));
+        }
+        catch (Exception e) {
+          throw new VoyagerHttpException( req, "Error reading stram", e );
+        }
+        return rsp;
+      }
+    };
   }
 
   //----------------------------------------------------
@@ -61,15 +85,17 @@ public class AutonomyRunner extends BaseDiscoveryRunner<AutonomyLocation> {
       throw new IllegalArgumentException("Missing URI");
     }
     
+    setProcessedCount(0);
     
     VoyagerHttpRequest req = new VoyagerHttpRequest("https://voyagerdemo.com/Autonomy");
     req.params = new ModifiableSolrParams();
-    req.params.set("MaxResults", 50); //
     
     final AtomicInteger count = new AtomicInteger(0);
     int start = 1;
     while(!isStopRequested()) {
       req.params.set("Start", start); 
+      req.params.set("MaxResults", start+location.getPageSize());
+      req.params.set("predict", Boolean.FALSE); 
       count.set(0);
       
       XdmNode doc = parser.parse(req, VoyagerHttpClient.getInstance()).doc;
@@ -78,6 +104,8 @@ public class AutonomyRunner extends BaseDiscoveryRunner<AutonomyLocation> {
       AutnResponseData d = reader.readResponse(doc, new Function<XdmNode, Void>() {
         @Override
         public Void apply(XdmNode node) {
+          incrProcessedCount(1);
+          
           hit.reset();
           count.incrementAndGet();
           XdmNode content = reader.fillHitContent(hit, node);
@@ -90,13 +118,14 @@ public class AutonomyRunner extends BaseDiscoveryRunner<AutonomyLocation> {
           return null;
         }
       });
+      setItemsToProcess(d.totalhits);
       
-      if(count.get()==0) {
+      if(count.get()==0) { // no results returned
         break;
       }
       
-      start += count.get();
-      if(start>=d.numhits) {
+      start += location.getPageSize(); // or count.size?
+      if(start>=d.totalhits) {
         break;
       }
     } 

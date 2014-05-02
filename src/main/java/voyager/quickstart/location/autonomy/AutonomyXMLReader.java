@@ -9,6 +9,9 @@ import org.apache.commons.beanutils.BeanUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import net.sf.saxon.Configuration;
+import net.sf.saxon.lib.FeatureKeys;
+import net.sf.saxon.lib.Validation;
 import net.sf.saxon.s9api.Axis;
 import net.sf.saxon.s9api.DocumentBuilder;
 import net.sf.saxon.s9api.Processor;
@@ -36,8 +39,11 @@ public class AutonomyXMLReader {
   
   public AutonomyXMLReader() throws SaxonApiException {
     processor = new Processor(false);
+    processor.setConfigurationProperty(FeatureKeys.DTD_VALIDATION, false);
+    processor.setConfigurationProperty(FeatureKeys.SCHEMA_VALIDATION, Validation.SKIP);
+    processor.setConfigurationProperty(FeatureKeys.RECOVERY_POLICY, Configuration.RECOVER_WITH_WARNINGS);
     builder = processor.newDocumentBuilder();
-
+    
     XPathCompiler c = processor.newXPathCompiler();
     c.declareNamespace("autn", "http://schemas.autonomy.com/aci/");
     
