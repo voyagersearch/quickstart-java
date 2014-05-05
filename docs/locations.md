@@ -16,6 +16,13 @@ This is an example that connects to an RSS feed
   * [EarthquakesLocationFactory.java]
 
 
+### Autonomy IDOL Location
+This is a basic example connecting to a Autonomy IDOL service.  
+  * [AutonomyLocation.java]
+  * [AutonomyRunner.java]
+  * [AutonomyLocationFactory.java]
+
+
 ### MyFolder Location
 This is an example with a more complex JSON configuration
   * [MyFolderLocation.java]
@@ -54,6 +61,9 @@ Selecting the location type will allow easily registering the location configura
 [MyFolderLocationFactory.java]:  ../src/main/java/voyager/quickstart/location/folder/MyFolderLocationFactory.java
 
 
+[AutonomyLocation.java]:         ../src/main/java/voyager/quickstart/location/autonomy/AutonomyLocation.java
+[AutonomyRunner.java]:           ../src/main/java/voyager/quickstart/location/autonomy/AutonomyRunner.java
+[AutonomyLocationFactory.java]:  ../src/main/java/voyager/quickstart/location/autonomy/AutonomyLocationFactory.java
 
 
 
