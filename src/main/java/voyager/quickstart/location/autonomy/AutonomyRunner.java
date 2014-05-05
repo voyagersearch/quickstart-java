@@ -27,10 +27,9 @@ import voyager.discovery.location.BaseDiscoveryRunner;
 import voyager.http.VoyagerHttpClient;
 import voyager.http.VoyagerHttpException;
 import voyager.http.VoyagerHttpRequest;
-import voyager.http.XmlHttpParser;
-import voyager.http.XmlHttpResponse;
 import voyager.quickstart.location.autonomy.bean.AutnHit;
 import voyager.quickstart.location.autonomy.bean.AutnResponseData;
+import voyager.quickstart.location.autonomy.util.*;
 
 import com.google.common.base.Function;
 import com.google.common.base.Throwables;
@@ -55,7 +54,6 @@ public class AutonomyRunner extends BaseDiscoveryRunner<AutonomyLocation> {
     
     reader = r;
     parser = new XmlHttpParser(reader.builder) {
-
       @Override
       public XmlHttpResponse parse(VoyagerHttpRequest req, InputStream input, String contentType, String encoding) throws VoyagerHttpException {
         XmlHttpResponse rsp = new XmlHttpResponse();
