@@ -5,6 +5,9 @@ import voyager.api.infrastructure.json.JSONException;
 import voyager.api.infrastructure.json.JSONObject;
 import voyager.api.infrastructure.json.JSONWriter;
 
+/**
+ * 
+ */
 public class AutonomyLocation extends ServiceLocation {
 
   public static final String TYPE = "autonomy";
