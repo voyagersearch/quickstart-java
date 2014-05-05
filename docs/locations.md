@@ -17,7 +17,7 @@ This is an example that connects to an RSS feed
 
 
 ### Autonomy IDOL Location
-This is a basic example connecting to a [Autonomy IDOL service]:(location-autonomy.md).  
+This is a basic example connecting to a [Autonomy IDOL service](location-autonomy.md).  
   * [AutonomyLocation.java]
   * [AutonomyRunner.java]
   * [AutonomyLocationFactory.java]
