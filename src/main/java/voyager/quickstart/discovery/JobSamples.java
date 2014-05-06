@@ -176,7 +176,20 @@ public class JobSamples {
     
     return job;
   }
-  
+
+  public static DiscoveryJob makeAddRecordWithImageURL()
+  {
+    DiscoveryJob job = new DiscoveryJob();
+    job.setAction(DiscoveryAction.ADD);
+    job.setId("with_image_1234");
+    
+    Entry entry = new Entry();
+    entry.setField(DexField.NAME, "An Item with a thumbnail");
+    entry.setField(DexField.IMAGE_URL, "https://raw.githubusercontent.com/voyagersearch/quickstart-java/master/docs/imgs/eclipse_2_set_variable.png");
+    entry.setField(DexField.META_LOCATOR, "geoeye");
+    job.setEntry(entry);
+    return job;
+  }
 
   public static DiscoveryJob makeAddRecordTreeAndExtract()
   {

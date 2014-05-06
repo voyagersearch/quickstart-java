@@ -100,6 +100,9 @@ public class RestIntegrationTest extends IntegrationBase {
 
     // Record with links to data
     postJobCommitAndVerifyIndex(JobSamples.makeAddRecordWithLinks());
+
+    // Record with links to data
+    postJobCommitAndVerifyIndex(JobSamples.makeAddRecordWithImageURL());
    
     // Add a copy of the tree document so we can remove it
     DiscoveryJob job = JobSamples.makeAddRecordTree();
