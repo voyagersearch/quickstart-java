@@ -63,7 +63,7 @@ Check that your .jar file is in the ${app.dir}/lib/ext folder and restart voyage
 
 After restarting voyager, your custom code will be loaded in Voyager.
 
-See [Custom Locations](docs/locations.md) for how some of these extensions will appear.
+See [Custom Locations](docs/locations.md#adding-custom-locations-from-the-ui) for how some of these extensions will appear.
 
 
 
