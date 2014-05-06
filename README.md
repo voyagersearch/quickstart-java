@@ -36,6 +36,37 @@ To point to any Voyager install, set the `voyager.dir` system property:
     ant -Dvoyager.dir=d:\voyager\server_1.9
 
 
+Installing in Voyager
+---------------------
+
+After running ant succesfully, a jar file will be created in:
+
+    build/voyager-custom-extensions.jar
+
+Copy this file to your ${app.dir}/lib/ext folder.  Alternativly you can run
+
+    ant install
+    
+This will build the extension and copy it to the configured voyager instance:
+
+    install:
+         [copy] Copying 1 file to /Users/ryan/workspace/voyager/test/artifact/Voyager/app/lib/ext
+         [copy] Copying /Users/ryan/workspace/quickstart-java/build/voyager-custom-extensions.jar to /Users/ryan/workspace/voyager/test/artifact/Voyager/app/lib/ext/voyager-custom-extensions.jar
+    
+    BUILD SUCCESSFUL
+    Total time: 3 seconds
+
+Check that your .jar file is in the ${app.dir}/lib/ext folder and restart voyager:
+
+   ![ext folder](docs/imgs/install_jar_in_lib_ext.png)
+
+
+After restarting voyager, your custom code will be loaded in Voyager.
+
+See [Custom Locations](docs/locations.md) for how some of these extensions will appear.
+
+
+
 Integration Tests
 -----------------
 
