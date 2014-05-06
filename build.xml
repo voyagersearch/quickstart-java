@@ -7,7 +7,7 @@
   <property name="src.dir"         value="src/main/java" />
   <property name="resources.dir"   value="src/main/resources" />
   <property name="src.tests"       value="src/test/java" />
-  <property name="output.jar"      value="build/voyager-quickstart.jar"  />
+  <property name="output.jar"      value="build/voyager-custom-extensions.jar"  />
   <property name="build.dir"       value="build/bin"  />
   <property name="test.dir"        value="build/test" />
 
@@ -121,7 +121,7 @@
     </junit>
   </target>
 
-  <target name="deploy" depends="test"
+  <target name="install" depends="test"
     description="--> copy jar to extensions folder">
     <copy file="${output.jar}" todir="${voyager.app}/lib/ext" 
       overwrite="true"
