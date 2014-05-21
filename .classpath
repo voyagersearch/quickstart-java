@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
+	<classpathentry combineaccessrules="false" kind="src" path="/voyager-api"/>
 	<classpathentry kind="src" path="src/main/java"/>
 	<classpathentry kind="src" path="src/main/resources"/>
 	<classpathentry kind="src" path="src/test/java"/>
@@ -344,6 +345,5 @@
 	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/xz-1.4.jar"/>
 	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/zookeeper-3.4.6.jar"/>
 	<classpathentry kind="var" path="VOYAGER_DIR"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/voyager-api"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
