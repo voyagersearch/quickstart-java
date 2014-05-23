@@ -5,7 +5,6 @@ import java.net.URI;
 import org.apache.solr.client.solrj.impl.HttpSolrServer;
 
 import voyager.api.discovery.jobs.JobSubmitter;
-import voyager.discovery.ZmqJobSubmitter;
 
 public class AutonomyTester 
 {
