@@ -22,4 +22,12 @@ public class MyCustomTransformer implements DocumentTransformer, Serializable {
     doc.setField("meta_my_custom_field", str.toString());
     return true; // or false if nothing changed
   }
+  
+  /**
+   * This is used for the display in the UI
+   */
+  @Override
+  public String toString() {
+    return "My Custom Transformer";
+  }
 }
