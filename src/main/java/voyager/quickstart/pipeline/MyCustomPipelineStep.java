@@ -21,11 +21,6 @@ public class MyCustomPipelineStep implements PipelineStep {
     entry.addWarning("custom_step", 
       "this entry used a custom step at: "+new Date() );
     
-    if(false) {
-      // If you want to terminate the pipeline (and cancel indexing)
-      // return the STOP action
-      return StepAction.STOP;
-    }
     return StepAction.CONTINUE;
   }
 }
