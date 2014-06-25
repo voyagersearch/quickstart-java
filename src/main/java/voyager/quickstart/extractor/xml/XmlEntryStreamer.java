@@ -100,9 +100,12 @@ public abstract class XmlEntryStreamer
           if(f==null) {
             f = defaultAction;
           }
-          if(f!=null) {
+          if(f!=null && text.length()>0) {
             try {
-              f.process(entry, localName, fqn, text);
+              String txt = text.toString().trim();
+              if(txt.length()>0) {
+                f.process(entry, localName, fqn, txt);
+              }
             }
             catch(Exception ex) {
               entry.addWarningTrace("error setting field: "+fqn, ex);

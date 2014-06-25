@@ -14,9 +14,9 @@ public class SetExtentFromWKT implements FieldSetter {
     reader = new WKTReader();
   }
   
-  public void process(Entry entry, String localName, CharSequence fqn, StringBuilder text) {
+  public void process(Entry entry, String localName, CharSequence fqn, String text) {
     try {
-      Geometry geo = reader.read(text.toString());
+      Geometry geo = reader.read(text);
       entry.setExtent(new EntryExtent(geo));
     }
     catch(Exception ex) {

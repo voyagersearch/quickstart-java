@@ -8,7 +8,8 @@ public class MetaTextField implements FieldSetter {
     
   }
   
-  public void process(Entry entry, String localName, CharSequence fqn, StringBuilder text) {
-    entry.getFields().setField("meta_"+localName, text, 1.0f);
+  public void process(Entry entry, String localName, CharSequence fqn, String text) {
+    entry.getFields().setField("meta_"+
+        localName.replace('-', '_').replace('.', '_'), text, 1.0f);
   }
 }

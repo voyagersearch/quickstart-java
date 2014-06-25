@@ -14,9 +14,9 @@ public class DateFieldSetter implements FieldSetter {
     this.format = format;
   }
   
-  public void process(Entry entry, String localName, CharSequence fqn, StringBuilder text) {
+  public void process(Entry entry, String localName, CharSequence fqn, String text) {
     try {
-      entry.getFields().setField(fname, format.parse(text.toString()), 1.0f); 
+      entry.getFields().setField(fname, format.parse(text), 1.0f); 
     }
     catch(Exception ex) {
       entry.addWarningTrace("unable to set date field", ex);
