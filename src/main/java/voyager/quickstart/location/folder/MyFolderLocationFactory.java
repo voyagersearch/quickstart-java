@@ -53,8 +53,11 @@ public class MyFolderLocationFactory implements LocationFactory<MyFolderLocation
     if(loc.getPath()==null) {
       throw new IllegalArgumentException("Missing Path");
     }
+    if(Strings.isNullOrEmpty(loc.getName())) {
+      loc.setName( new File(loc.getPath()).getName() );
+    }
     if(Strings.isNullOrEmpty(loc.getId())) {
-      loc.setId(Location.getLocationHash(loc.getPath()));
+      loc.setId(Location.getLocationHash(loc.getClass()+loc.getPath()));
     }
   }
 }
