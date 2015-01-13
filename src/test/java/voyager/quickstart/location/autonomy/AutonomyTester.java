@@ -2,7 +2,7 @@ package voyager.quickstart.location.autonomy;
 
 import java.net.URI;
 
-import org.apache.solr.client.solrj.impl.HttpSolrServer;
+import org.apache.solr.client.solrj.impl.HttpSolrClient;
 
 import voyager.api.discovery.jobs.JobSubmitter;
 
@@ -14,7 +14,7 @@ public class AutonomyTester
     loc.setURI(new URI("http://voyagerdemo.com/Autonomy"));
     loc.setPageSize(5);
     
-    HttpSolrServer solr = null; // NOTE, not actually used.  new HttpSolrServer("http://localhost:7777/solr/v0");
+    HttpSolrClient solr = null; // NOTE, not actually used.  new HttpSolrServer("http://localhost:7777/solr/v0");
     JobSubmitter jobs = new DummyJobSubmitter();
     // new ZmqJobSubmitter("tcp://127.0.0.1:7100");
     
