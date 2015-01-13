@@ -13,7 +13,7 @@ import net.sf.saxon.s9api.XdmNode;
 import net.sf.saxon.s9api.XdmSequenceIterator;
 
 import org.apache.commons.io.IOUtils;
-import org.apache.solr.client.solrj.SolrServer;
+import org.apache.solr.client.solrj.SolrClient;
 import org.apache.solr.common.SolrInputDocument;
 import org.apache.solr.common.params.ModifiableSolrParams;
 import org.slf4j.Logger;
@@ -41,7 +41,7 @@ public class AutonomyRunner extends BaseDiscoveryRunner<AutonomyLocation> {
   final AutonomyXMLReader reader;
   final XmlHttpParser parser;
   
-  public AutonomyRunner( AutonomyLocation loc, SolrServer solr, JobSubmitter jobs) {
+  public AutonomyRunner( AutonomyLocation loc, SolrClient solr, JobSubmitter jobs) {
     super(loc, solr, jobs);
   
     AutonomyXMLReader r = null;
