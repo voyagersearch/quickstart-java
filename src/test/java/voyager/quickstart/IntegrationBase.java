@@ -3,8 +3,8 @@ package voyager.quickstart;
 import org.apache.http.auth.AuthScope;
 import org.apache.http.auth.UsernamePasswordCredentials;
 import org.apache.http.impl.client.DefaultHttpClient;
-import org.apache.solr.client.solrj.SolrServer;
-import org.apache.solr.client.solrj.impl.HttpSolrServer;
+import org.apache.solr.client.solrj.SolrClient;
+import org.apache.solr.client.solrj.impl.HttpSolrClient;
 import org.junit.After;
 import org.junit.Before;
 
@@ -27,7 +27,7 @@ public abstract class IntegrationBase {
     if(!baseURL.endsWith("/")) {
       baseURL += "/";
     }
-    solr = new HttpSolrServer(baseURL+"solr/v0");
+    solr = new HttpSolrClient(baseURL+"solr/v0");
 
     httpclient = new DefaultHttpClient();
     httpclient.getCredentialsProvider().setCredentials(
