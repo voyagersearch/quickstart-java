@@ -6,7 +6,7 @@ import java.net.URI;
 import java.util.List;
 
 import org.apache.abdera.Abdera;
-import org.apache.solr.client.solrj.SolrServer;
+import org.apache.solr.client.solrj.SolrClient;
 import org.apache.solr.common.SolrInputDocument;
 
 import voyager.api.discovery.jobs.JobSubmitter;
@@ -32,7 +32,7 @@ public class EarthquakesRunner extends BaseDiscoveryRunner<EarthquakesLocation> 
   private static Abdera abdera = null;
   static final Logger log = LoggerFactory.getLogger(EarthquakesRunner.class);
   
-  public EarthquakesRunner( EarthquakesLocation loc, SolrServer solr, JobSubmitter jobs) {
+  public EarthquakesRunner( EarthquakesLocation loc, SolrClient solr, JobSubmitter jobs) {
     super(loc, solr, jobs);
   }
 

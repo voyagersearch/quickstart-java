@@ -8,7 +8,7 @@ import java.nio.file.SimpleFileVisitor;
 import java.nio.file.attribute.BasicFileAttributes;
 import java.util.concurrent.atomic.AtomicInteger;
 
-import org.apache.solr.client.solrj.SolrServer;
+import org.apache.solr.client.solrj.SolrClient;
 import org.apache.wicket.util.file.File;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -27,7 +27,7 @@ import voyager.quickstart.extractor.xml.XmlEntryStreamer;
 public class XmlFolderScanRunner extends BaseDiscoveryRunner<XmlFolderScanLocation> {
   static final Logger log = LoggerFactory.getLogger(XmlFolderScanRunner.class);
   
-  public XmlFolderScanRunner( XmlFolderScanLocation loc, SolrServer solr, JobSubmitter jobs) {
+  public XmlFolderScanRunner( XmlFolderScanLocation loc, SolrClient solr, JobSubmitter jobs) {
     super(loc, solr, jobs);
   }
 

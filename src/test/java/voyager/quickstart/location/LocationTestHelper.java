@@ -3,7 +3,7 @@ package voyager.quickstart.location;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.apache.solr.client.solrj.SolrServer;
+import org.apache.solr.client.solrj.SolrClient;
 import org.apache.solr.common.SolrInputDocument;
 import org.mockito.Matchers;
 import org.mockito.Mockito;
@@ -14,7 +14,7 @@ import voyager.jobs.JobSubmitterList;
 
 public class LocationTestHelper {
   public JobSubmitterList jobs = new JobSubmitterList();
-  public SolrServer solr = Mockito.mock(SolrServer.class);
+  public SolrClient solr = Mockito.mock(SolrClient.class);
   final List<SolrInputDocument> values = new ArrayList<>();
   
   public LocationTestHelper() throws Exception {

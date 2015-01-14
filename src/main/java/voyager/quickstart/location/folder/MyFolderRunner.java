@@ -1,6 +1,6 @@
 package voyager.quickstart.location.folder;
 
-import org.apache.solr.client.solrj.SolrServer;
+import org.apache.solr.client.solrj.SolrClient;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -10,7 +10,7 @@ import voyager.discovery.location.BaseDiscoveryRunner;
 public class MyFolderRunner extends BaseDiscoveryRunner<MyFolderLocation> {
   static final Logger log = LoggerFactory.getLogger(MyFolderRunner.class);
   
-  public MyFolderRunner( MyFolderLocation loc, SolrServer solr, JobSubmitter jobs) {
+  public MyFolderRunner( MyFolderLocation loc, SolrClient solr, JobSubmitter jobs) {
     super(loc, solr, jobs);
   }
 

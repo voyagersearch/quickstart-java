@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
 
-import org.apache.solr.client.solrj.SolrServer;
+import org.apache.solr.client.solrj.SolrClient;
 
 import voyager.api.discovery.DiscoveryRunner;
 import voyager.api.discovery.jobs.JobSubmitter;
@@ -42,7 +42,7 @@ public class AutonomyLocationFactory implements LocationFactory<AutonomyLocation
 
   @Override
   public DiscoveryRunner<?> newRunner(AutonomyLocation loc, boolean delta) throws IOException {
-    SolrServer solr = Registry.get(SolrServer.class);
+    SolrClient solr = Registry.get(SolrClient.class);
     JobSubmitter jobs = Registry.get(JobSubmitter.class);
     return new AutonomyRunner(loc, solr, jobs);
   }

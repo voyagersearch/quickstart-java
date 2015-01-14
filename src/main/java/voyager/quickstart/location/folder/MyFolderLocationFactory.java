@@ -3,7 +3,7 @@ package voyager.quickstart.location.folder;
 import java.io.File;
 import java.io.IOException;
 
-import org.apache.solr.client.solrj.SolrServer;
+import org.apache.solr.client.solrj.SolrClient;
 
 import voyager.api.discovery.DiscoveryRunner;
 import voyager.api.discovery.jobs.JobSubmitter;
@@ -43,7 +43,7 @@ public class MyFolderLocationFactory implements LocationFactory<MyFolderLocation
 
   @Override
   public DiscoveryRunner<?> newRunner(MyFolderLocation loc, boolean delta) throws IOException {
-    SolrServer solr = Registry.get(SolrServer.class);
+    SolrClient solr = Registry.get(SolrClient.class);
     JobSubmitter jobs = Registry.get(JobSubmitter.class);
     return new MyFolderRunner(loc, solr, jobs);
   }

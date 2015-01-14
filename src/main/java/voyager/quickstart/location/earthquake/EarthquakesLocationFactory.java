@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
 
-import org.apache.solr.client.solrj.SolrServer;
+import org.apache.solr.client.solrj.SolrClient;
 
 import com.google.common.base.Strings;
 import com.google.common.base.Throwables;
@@ -43,7 +43,7 @@ public class EarthquakesLocationFactory implements LocationFactory<EarthquakesLo
 
   @Override
   public DiscoveryRunner<?> newRunner(EarthquakesLocation loc, boolean delta) throws IOException {
-    SolrServer solr = Registry.get(SolrServer.class);
+    SolrClient solr = Registry.get(SolrClient.class);
     JobSubmitter jobs = Registry.get(JobSubmitter.class);
     return new EarthquakesRunner(loc, solr, jobs);
   }

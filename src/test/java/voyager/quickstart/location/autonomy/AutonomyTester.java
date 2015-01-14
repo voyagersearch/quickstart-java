@@ -14,7 +14,7 @@ public class AutonomyTester
     loc.setURI(new URI("http://voyagerdemo.com/Autonomy"));
     loc.setPageSize(5);
     
-    HttpSolrClient solr = null; // NOTE, not actually used.  new HttpSolrServer("http://localhost:7777/solr/v0");
+    HttpSolrClient solr = null; // NOTE, not actually used.  new HttpSolrClient("http://localhost:7777/solr/v0");
     JobSubmitter jobs = new DummyJobSubmitter();
     // new ZmqJobSubmitter("tcp://127.0.0.1:7100");
     

@@ -14,7 +14,7 @@ import org.junit.Before;
 public abstract class IntegrationBase {
 
   protected String baseURL;
-  protected SolrServer solr;
+  protected SolrClient solr;
   protected DefaultHttpClient httpclient;
   
   @Before
