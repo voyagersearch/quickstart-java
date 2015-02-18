@@ -13,7 +13,7 @@ import voyager.api.discovery.DiscoveryRunner;
 import voyager.api.discovery.jobs.JobSubmitter;
 import voyager.api.discovery.location.LocationFactory;
 import voyager.api.discovery.location.service.ServiceLocation;
-import voyager.common.util.Registry;
+import voyager.api.infrastructure.util.Registry;
 
 public class EarthquakesLocationFactory implements LocationFactory<EarthquakesLocation> {
 
