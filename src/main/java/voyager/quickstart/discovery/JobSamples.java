@@ -281,6 +281,13 @@ public class JobSamples {
     out.println( "\n![structure](imgs/links.png)\n");
     
 
+    out.println("\n## Entry with a preview/thumbnail image");
+    out.println( "\n```json" );
+    out.println( makeAddRecordWithImageURL().toPrettyJSON() );
+    out.println( "```" );
+    out.println( "NOTE: setting the field '"+DexField.PATH_TO_THUMB.name+"' expects the thumbnail to be in the ${meta.dir} folder");
+    
+    
     out.println("\n## Entry with structure and child documents get indexed");
     out.println("When you add the '"+DexField.TO_EXTRACT.name+"', field, the child items are added to the extraction queue.");
     out.println( "\n```json" );
