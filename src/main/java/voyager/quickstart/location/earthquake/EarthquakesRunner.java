@@ -3,6 +3,7 @@ package voyager.quickstart.location.earthquake;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.URI;
+import java.util.Date;
 import java.util.List;
 
 import org.apache.abdera.Abdera;
@@ -12,8 +13,12 @@ import org.apache.solr.common.SolrInputDocument;
 import voyager.api.discovery.jobs.JobSubmitter;
 import voyager.api.domain.model.entry.DexField;
 import voyager.api.domain.model.entry.EntryExtent;
+import voyager.api.infrastructure.util.DateUtil;
+import voyager.api.infrastructure.util.Registry;
+import voyager.api.process.ProcessState;
 import voyager.discovery.ConvertToSearchableDocument;
 import voyager.discovery.location.BaseDiscoveryRunner;
+import voyager.discovery1x.config.impl.DiscoveryDAO;
 
 import org.apache.abdera.ext.geo.Coordinate;
 import org.apache.abdera.ext.geo.GeoHelper;
@@ -31,6 +36,7 @@ import org.slf4j.LoggerFactory;
 public class EarthquakesRunner extends BaseDiscoveryRunner<EarthquakesLocation> {
   private static Abdera abdera = null;
   static final Logger log = LoggerFactory.getLogger(EarthquakesRunner.class);
+  private String lastID = null;
   
   public EarthquakesRunner( EarthquakesLocation loc, SolrClient solr, JobSubmitter jobs) {
     super(loc, solr, jobs);
@@ -59,6 +65,17 @@ public class EarthquakesRunner extends BaseDiscoveryRunner<EarthquakesLocation> 
       throw new IllegalArgumentException("Missing URI");
     }
     
+    // We could use the last successful info to affect our current query
+    String last = location.getProperty("LastSuccess");
+    if(last!=null) {
+      log.info("FYI, LastSuccess was: {}", last);
+    }
+    last = location.getProperty("LastID");
+    if(last!=null) {
+      log.info("FYI, LastID was: {}", last);
+    }
+    
+    
     Parser parser = getAbdera().getParser();
     try {
       Document<Feed> xdoc = parser.parse(openStream(uri), uri.toString());
@@ -69,7 +86,8 @@ public class EarthquakesRunner extends BaseDiscoveryRunner<EarthquakesLocation> 
       // Get the entry items...
       for (Entry item : feed.getEntries()) {
         SolrInputDocument doc = new SolrInputDocument();
-        doc.setField(DexField.ID.name, item.getId().toString().replace(':', '_')); // assuming this is globally unique
+        lastID = item.getId().toString();
+        doc.setField(DexField.ID.name, lastID.replace(':', '_')); // assuming this is globally unique
         doc.setField(DexField.NAME.name, item.getTitle());
         doc.setField(DexField.CREATED.name, item.getPublished());
 
@@ -111,6 +129,26 @@ public class EarthquakesRunner extends BaseDiscoveryRunner<EarthquakesLocation> 
     } 
     catch (Exception ex) {
       log.error("Error reading feed", ex);
+    }
+  }
+  
+  @Override
+  public void finish() {
+    super.finish();
+    
+    if(state==ProcessState.SUCCESS) {
+      location.setProperty("LastSuccess", DateUtil.FORMAT.SOLR.format(new Date()));
+      if(lastID!=null) {
+        location.setProperty("LastID", lastID);
+      }
+      
+      try {
+        // Note, use of DiscoveryDAO may change in the future!
+        Registry.get(DiscoveryDAO.class).save(location);
+      }
+      catch(Exception ex) {
+        log.warn("Error saving location: {}", location, ex);
+      }
     }
   }
 }
