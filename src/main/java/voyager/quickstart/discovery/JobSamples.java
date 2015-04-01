@@ -151,11 +151,7 @@ public class JobSamples {
     entry.setField(DexField.NAME, "Item With Links");
     entry.setField(DexField.ABSTRACT, "some longer text about what we have");
     
-    EntryExtent extent = new EntryExtent();
-    extent.xmin = -88.59375;
-    extent.ymin =  24.766785;
-    extent.xmax = -78.222656;
-    extent.ymax =  31.128199;
+    EntryExtent extent = new EntryExtent(-88.59375, 24.766785, -78.222656, 31.128199);
     entry.setExtent(extent);
     job.setEntry(entry);
     
