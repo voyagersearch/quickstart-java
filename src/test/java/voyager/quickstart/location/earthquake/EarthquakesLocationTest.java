@@ -18,7 +18,7 @@ import voyager.api.domain.model.entry.DexField;
 import voyager.jobs.JobSubmitterList;
 
 public class EarthquakesLocationTest {
-  
+
   @Test
   public void testReadIndex() throws Exception {
     JobSubmitterList jobs = new JobSubmitterList();
@@ -47,7 +47,7 @@ public class EarthquakesLocationTest {
     
     // make sure everything has a "pointDD" field
     for(SolrInputDocument doc : values) {
-      Assert.assertNotNull(doc.getFieldValue(DexField.POINT_DD.name));
+      Assert.assertNotNull(doc.getFieldValue(DexField.GEO.name));
     }
   }
 }
