@@ -14,6 +14,7 @@ public class DateFieldSetter implements FieldSetter {
     this.format = format;
   }
   
+  @Override
   public void process(Entry entry, String localName, CharSequence fqn, String text) {
     try {
       entry.getFields().setField(fname, format.parse(text), 1.0f); 

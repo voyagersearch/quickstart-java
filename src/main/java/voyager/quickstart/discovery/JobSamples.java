@@ -7,7 +7,7 @@ import voyager.api.discovery.jobs.DiscoveryAction;
 import voyager.api.discovery.jobs.DiscoveryJob;
 import voyager.api.domain.model.entry.DexField;
 import voyager.api.domain.model.entry.Entry;
-import voyager.api.domain.model.entry.EntryExtent;
+import voyager.api.domain.model.entry.EntryGeo;
 import voyager.api.domain.model.entry.EntryLink;
 import voyager.api.domain.model.entry.EntryMeta;
 import voyager.api.mime.VoyagerMimeTypes;
@@ -102,7 +102,7 @@ public class JobSamples {
     entry.setField(DexField.NAME, "Name ("+System.currentTimeMillis()+")");
     entry.setField(DexField.ABSTRACT, "some longer text about what we have");
     entry.setField(DexField.COPYRIGHT, "some copyright message");
-    entry.setExtent(new EntryExtent(37.78875904932722, -122.38787244901528));
+    entry.setExtent(new EntryGeo(37.78875904932722, -122.38787244901528));
     
     // Point to raw metadata
     EntryMeta meta = new EntryMeta();
@@ -151,7 +151,7 @@ public class JobSamples {
     entry.setField(DexField.NAME, "Item With Links");
     entry.setField(DexField.ABSTRACT, "some longer text about what we have");
     
-    EntryExtent extent = new EntryExtent(-88.59375, 24.766785, -78.222656, 31.128199);
+    EntryGeo extent = new EntryGeo(-88.59375, 24.766785, -78.222656, 31.128199);
     entry.setExtent(extent);
     job.setEntry(entry);
     

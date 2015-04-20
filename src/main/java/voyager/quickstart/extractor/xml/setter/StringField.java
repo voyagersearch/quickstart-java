@@ -10,6 +10,7 @@ public class StringField implements FieldSetter {
     this.fname = fname;
   }
   
+  @Override
   public void process(Entry entry, String localName, CharSequence fqn, String text) {
     entry.getFields().setField(fname, text, 1.0f); 
   }

@@ -12,7 +12,7 @@ import org.apache.solr.common.SolrInputDocument;
 
 import voyager.api.discovery.jobs.JobSubmitter;
 import voyager.api.domain.model.entry.DexField;
-import voyager.api.domain.model.entry.EntryExtent;
+import voyager.api.domain.model.entry.EntryGeo;
 import voyager.api.infrastructure.util.DateUtil;
 import voyager.api.infrastructure.util.Registry;
 import voyager.api.process.ProcessState;
@@ -103,11 +103,11 @@ public class EarthquakesRunner extends BaseDiscoveryRunner<EarthquakesLocation> 
         }
         
         // Read the geometry information
-        EntryExtent ext = null;
+        EntryGeo ext = null;
         for(Position p : GeoHelper.getPositions(item)) {
           if(p instanceof Point) {
             Coordinate point = ((Point)p).getCoordinate();
-            EntryExtent tmp = new EntryExtent(point.getLatitude(), point.getLongitude()); 
+            EntryGeo tmp = new EntryGeo(point.getLatitude(), point.getLongitude()); 
             if(ext==null) {
               ext = tmp;
             }
