@@ -58,9 +58,9 @@ public class SamplePlacefinder extends Placefinder {
     
     // Hardcode locations
     SpatialContext ctx = JtsSpatialContext.GEO;
-    register(ctx.makePoint(37.783333, -122.416667), "San Francisco");
-    register(ctx.makePoint(39.76185, -104.881105), "Denver");
-    register(ctx.makePoint(38.904722, -77.016389), "Washington DC", "DC");
+    register(ctx.makePoint(-122.416667, 37.783333), "San Francisco");
+    register(ctx.makePoint(-104.881105, 39.76185), "Denver");
+    register(ctx.makePoint(-77.016389, 38.904722), "Washington DC", "DC");
   }
   
   public String normalize(String query) {
