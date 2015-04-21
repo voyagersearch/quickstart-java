@@ -82,7 +82,7 @@ public class SamplePlacefinder extends Placefinder {
   @Override
   public List<PlaceResult> find(PlaceSearch query) throws Exception {
     String norm = normalize(query.text.toString());
-    Shape match = places.get(query.text);
+    Shape match = places.get(norm);
     if(match!=null) {
       PlaceResult r = new PlaceResult(norm, 1.0f, getName()).shape(match);
       return Collections.singletonList(r);
