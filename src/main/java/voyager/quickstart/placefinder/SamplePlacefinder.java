@@ -39,7 +39,8 @@ public class SamplePlacefinder extends Placefinder {
 
     @Override
     public PlacefinderSettings createInitialSettings() {
-      return new PlacefinderSettings().type(getName());
+      return new PlacefinderSettings().type(getName())
+          .enabled(false); // by default keep it disabled
     }
 
     @Override
