@@ -1,7 +1,7 @@
 package voyager.quickstart.location.autonomy.util;
 
 import net.sf.saxon.s9api.XdmNode;
-import voyager.http.VoyagerHttpResponse;
+import voyager.common.http.VoyagerHttpResponse;
 
 
 

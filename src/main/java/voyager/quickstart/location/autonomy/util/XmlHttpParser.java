@@ -5,9 +5,9 @@ import java.io.InputStream;
 import javax.xml.transform.stream.StreamSource;
 
 import net.sf.saxon.s9api.DocumentBuilder;
-import voyager.http.BaseHttpParser;
-import voyager.http.VoyagerHttpException;
-import voyager.http.VoyagerHttpRequest;
+import voyager.common.http.BaseHttpParser;
+import voyager.common.http.VoyagerHttpException;
+import voyager.common.http.VoyagerHttpRequest;
 
 public class XmlHttpParser extends BaseHttpParser<VoyagerHttpRequest,XmlHttpResponse>
 {
