@@ -24,7 +24,7 @@ import voyager.api.domain.model.entry.Entry;
 import voyager.api.domain.model.entry.EntryMeta;
 import voyager.api.error.DiscoveryError;
 import voyager.discovery.location.BaseDiscoveryRunner;
-import voyager.http.VoyagerHttpClient;
+import voyager.common.http.VoyagerHttpClient;
 import voyager.http.VoyagerHttpException;
 import voyager.http.VoyagerHttpRequest;
 import voyager.quickstart.location.autonomy.bean.AutnHit;

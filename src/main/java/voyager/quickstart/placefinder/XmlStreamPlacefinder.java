@@ -31,7 +31,7 @@ import voyager.api.placefinder.PlaceSearch;
 import voyager.api.placefinder.Placefinder;
 import voyager.api.placefinder.PlacefinderFactory;
 import voyager.api.placefinder.PlacefinderSettings;
-import voyager.http.VoyagerHttpClient;
+import voyager.common.http.VoyagerHttpClient;
 
 import com.google.common.base.Charsets;
 import com.google.common.base.Strings;
