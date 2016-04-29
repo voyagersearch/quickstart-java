@@ -1,6 +1,7 @@
 bin
 build
 out
+target
 *.class
 
 # Package Files #
