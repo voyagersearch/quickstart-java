@@ -73,20 +73,14 @@ This repository contains an Eclipse project that allows to run the samples from 
 From Eclipse:
 
 1. Import this directory as an [existing project](http://help.eclipse.org/juno/index.jsp?topic=%2Forg.eclipse.platform.doc.user%2Ftasks%2Ftasks-importproject.htm).
+
+   ![build path](docs/imgs/eclipse_import1.png)
+   ![build path](docs/imgs/eclipse_import2.png)
+
 1. Set up a [Classpath Variable](http://help.eclipse.org/juno/index.jsp?topic=%2Forg.eclipse.jdt.doc.user%2Freference%2Fpreferences%2Fjava%2Fbuildpath%2Fref-preferences-classpath-variables.htm) named `VOYAGER_DIR` that points the Voyager directory. 
 
-   Right click on the project to configure the build path:
-   
-   
-   ![build path](docs/imgs/eclipse_1_configure_build_path.png)
-
-
-
-   Configure your variable:
-   
-   
-   ![variable](docs/imgs/eclipse_2_set_variable.png)
-
+   ![build path](docs/imgs/eclipse_build_path.png)   
+   ![variable](docs/imgs/eclipse_classpath_var.png)
 
 
 Quickstart Distribution
