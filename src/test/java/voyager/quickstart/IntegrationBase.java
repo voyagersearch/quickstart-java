@@ -22,7 +22,7 @@ public abstract class IntegrationBase {
   {
     baseURL = System.getProperty("voyager.url");
     if(baseURL==null) {
-      baseURL = "http://localhost:7777/";
+      baseURL = "http://localhost:8888/";
     }
     if(!baseURL.endsWith("/")) {
       baseURL += "/";
