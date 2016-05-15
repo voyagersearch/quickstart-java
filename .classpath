@@ -434,5 +434,6 @@
 	<classpathentry kind="var" path="VOYAGER_DIR/app/lib/zookeeper-3.4.6.jar"/>
 	<classpathentry kind="var" path="VOYAGER_DIR/dev/java/lib/javax.servlet-api-3.0.1.jar"/>
 	<classpathentry kind="var" path="VOYAGER_DIR/dev/java/lib/mockito-all-1.10.19.jar"/>
+	<classpathentry kind="var" path="VOYAGER_DIR"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

@@ -2,6 +2,7 @@ bin
 build
 out
 target
+.idea
 *.class
 
 # Package Files #
