@@ -18,7 +18,8 @@
 
   If the property is not set, we will assume we are running within the 'dev/java/quickstart' folder
   -->
-  <property name="voyager.dir"  value="../../.." />
+  <!--property name="voyager.dir"  value="../../.." /-->
+  <property name="voyager.dir"  value="c:\voyager\server_1.9.8_dev_task" />
   <property name="voyager.app"  value="${voyager.dir}/app" />
   <property name="voyager.dev"  value="${voyager.dir}/dev" />
   <property name="voyager.url"  value="http://localhost:8888/" />
