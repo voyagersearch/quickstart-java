@@ -45,6 +45,7 @@ Issues - None
 I used [chocolatey](https://chocolatey.org/) to install Ant
 
 Time Spent - 30 mins
+
 Issues - None
 
 ### Compiling Code
@@ -54,7 +55,7 @@ Initially none of the libs were found so I referenced ```198``` ```{voyager.dir}
 a majority of the reference issues.
 
 Next, I got a lot of errors pertaining to libs like ```aws\*.jar``` and ```voyager\*.RC1.jar```
-This lead me to determine why I was missing libs as I was looking in the '''197''' dir.
+This lead me to determine why I was missing libs as I was looking in the `197` dir.
 Eventually I installed 198 RC1 from jenkins and was able to resolve the libs issue by updating the .classpath file
 ie, I have to change some libs names to included RC1 in the name
 
@@ -80,6 +81,7 @@ Eventually, I understood what the readme was saying on how to override settings.
 The code compiled fine and copied the correct file to the `ext` dir in my `198` install dir
 
 Time Spent - 6 hrs
+
 Issues - Using the master branch made my Voyager libs incompatible with the repo references
   * Using the master branch made my Voyager libs incompatible with the repo references
   * Finding all the references in IntelliJ that needed to select the correct Java version
@@ -90,6 +92,7 @@ Issues - Using the master branch made my Voyager libs incompatible with the repo
 To ensure the process worked correctly I ran Voyager and went through the Earthquakes Location workflow
 
 Time Spent - 10 mins
+
 Issues - None
 
 ### Running the project
@@ -98,12 +101,14 @@ I pulled in resources to help me (Sam, Trinity, and Justin), but it was determin
 place within the IDE
 
 Time Spent - 4hrs
+
 Issues - the `readme` made it appear that running from Eclipse was possible, so I spent considerable time trying to get this to work
 
 ### Setup new application undr my twitter dev acct
 In order to generate the tokens and keys needed, I created a new application under my twitter dev acct
 
 Time Spent - 10mins
+
 Issues - None
 
 
@@ -165,6 +170,7 @@ Issues - None
   * Lastly I updated the code to get the information from the configuaration rather than the hard code vals
 
 Time Spent - 4hrs
+
 Issues
   * Went back and forth as to whether to use Service Location or Location
   * Went back and forth as to whether or not to use DEX model or just strictly load up the field object
@@ -178,7 +184,7 @@ Issues
 ![UI](imgs/Voyager_Geo_Tweets.png)
 
 ### Items to note
-  * I ran through the entire process using the `release` branch and not not have the lib conflicts noted earlier
+  * I ran through the entire process using the `release` branch and did not have the lib conflicts noted earlier
   * I was able to deploy the custom location without any changes
 
 [TwitterLocationFactory.java]:         ../src/main/java/voyager/quickstart/location/twitter/TwitterLocationFactory.java
