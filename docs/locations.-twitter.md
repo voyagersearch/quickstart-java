@@ -189,6 +189,8 @@ Issues
 ### Items to note
   * I ran through the entire process using the `release` branch and did not have the lib conflicts noted earlier
   * I was able to deploy the custom location without any changes
+  * I did not create any unit test, If I was applying I would have, I think that would add about 4 hrs for me
+
 
 [TwitterLocationFactory.java]:         ../src/main/java/voyager/quickstart/location/twitter/TwitterLocationFactory.java
 [TwitterLocation.java]:         ../src/main/java/voyager/quickstart/location/twitter/TwitterLocation.java
