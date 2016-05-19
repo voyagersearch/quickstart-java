@@ -22,6 +22,7 @@ Due to not knowing which branch to work off of, I also installed 198 RC1 since m
 
 
 Time Spent - 30 mins
+
 Issues - None
 
 
@@ -30,6 +31,7 @@ Clone the repo
 Cloning the repo was straightforward
 
 Time Spent - 10 mins
+
 Issues - Did not know which branch to use so I decided to use Master
 
 
@@ -39,6 +41,7 @@ Implement Custom Location
 I installed both Eclipse (because it was mentioned in the read me), and IntelliJ (my preferred Java IDE)
 
 Time Spent - 2hrs
+
 Issues - None
 
 ### Installing Ant
