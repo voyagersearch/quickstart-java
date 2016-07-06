@@ -4,7 +4,7 @@
   <parent>
     <artifactId>voyager-parent</artifactId>
     <groupId>com.voyagersearch</groupId>
-    <version>1.9.8-SNAPSHOT</version>
+    <version>1.9.8.1</version>
   </parent>
   <artifactId>voyager-quickstart</artifactId>
   <name>Voyager Quickstart</name>
