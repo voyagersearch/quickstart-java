@@ -16,7 +16,7 @@ import voyager.api.domain.model.entry.EntryGeo;
 import voyager.api.infrastructure.util.DateUtil;
 import voyager.api.infrastructure.util.Registry;
 import voyager.api.process.ProcessState;
-import voyager.discovery.ConvertToSearchableDocument;
+import voyager.discovery.SearchableDocumentConverter;
 import voyager.discovery.location.BaseDiscoveryRunner;
 import voyager.discovery1x.config.impl.DiscoveryDAO;
 
@@ -122,7 +122,7 @@ public class EarthquakesRunner extends BaseDiscoveryRunner<EarthquakesLocation> 
         
         // Add the extent fields to the SolrInputDocument
         if(ext!=null && ext.isValid()) {
-          ConvertToSearchableDocument.setExtent(doc, ext);
+          SearchableDocumentConverter.setExtent(doc, ext);
         }
         addDoc(doc);
       }

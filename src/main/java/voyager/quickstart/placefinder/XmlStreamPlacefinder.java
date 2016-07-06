@@ -20,8 +20,10 @@ import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.ResponseHandler;
 import org.apache.http.client.methods.HttpGet;
+import org.apache.solr.common.EmptyEntityResolver;
 import org.apache.solr.common.util.XMLErrorLogger;
-import org.apache.solr.util.EmptyEntityResolver;
+import org.locationtech.spatial4j.context.SpatialContext;
+import org.locationtech.spatial4j.context.jts.JtsSpatialContext;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
@@ -38,8 +40,6 @@ import com.google.common.base.Strings;
 import com.google.common.hash.HashCode;
 import com.google.common.hash.HashFunction;
 import com.google.common.hash.Hashing;
-import com.spatial4j.core.context.SpatialContext;
-import com.spatial4j.core.context.jts.JtsSpatialContext;
 
 
 public class XmlStreamPlacefinder extends Placefinder implements ResponseHandler<List<PlaceResult>> {

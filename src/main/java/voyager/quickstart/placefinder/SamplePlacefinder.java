@@ -6,11 +6,10 @@ import java.util.Locale;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
+import org.locationtech.spatial4j.context.SpatialContext;
+import org.locationtech.spatial4j.context.jts.JtsSpatialContext;
+import org.locationtech.spatial4j.shape.Shape;
 import org.springframework.stereotype.Component;
-
-import com.spatial4j.core.context.SpatialContext;
-import com.spatial4j.core.context.jts.JtsSpatialContext;
-import com.spatial4j.core.shape.Shape;
 
 import voyager.api.placefinder.PlaceResult;
 import voyager.api.placefinder.PlaceSearch;

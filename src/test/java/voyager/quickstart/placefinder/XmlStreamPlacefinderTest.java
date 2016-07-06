@@ -9,13 +9,11 @@ import java.util.List;
 import org.apache.solr.common.params.SolrParams;
 import org.junit.Test;
 
+import org.locationtech.spatial4j.shape.Shape;
 import voyager.api.infrastructure.json.JSONStringer;
 import voyager.api.placefinder.PlaceResult;
 import voyager.api.placefinder.PlaceSearch;
 import voyager.api.placefinder.PlacefinderSettings;
-import voyager.quickstart.placefinder.XmlStreamPlacefinder;
-
-import com.spatial4j.core.shape.Shape;
 
 public class XmlStreamPlacefinderTest {
 
