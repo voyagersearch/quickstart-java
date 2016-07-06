@@ -23,8 +23,11 @@
   <property name="voyager.dev"  value="${voyager.dir}/dev" />
   <property name="voyager.url"  value="http://localhost:8888/" />
 
+  <property name="lib.dir" value="${voyager.app}/lib"/>
+  <property name="lib.test.dir" value="${voyager.dev}/java/lib"/>
+
   <path id="compile.classpath">  
-    <fileset dir="${voyager.app}/lib">
+    <fileset dir="${lib.dir}">
       <include name="**/*.jar"/>
     </fileset>
   </path>  
@@ -32,7 +35,7 @@
   <path id="compile.test.classpath">  
     <path refid="compile.classpath"/>
     <pathelement path="${build.dir}"/>
-    <fileset dir="${voyager.dev}/java/lib">
+    <fileset dir="${lib.test.dir}">
       <include name="**/*.jar"/>
     </fileset>
   </path> 
