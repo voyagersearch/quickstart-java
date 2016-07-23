@@ -10,6 +10,7 @@ import org.apache.abdera.Abdera;
 import org.apache.solr.client.solrj.SolrClient;
 import org.apache.solr.common.SolrInputDocument;
 
+import twitter4j.GeoLocation;
 import voyager.api.discovery.jobs.JobSubmitter;
 import voyager.api.domain.model.entry.DexField;
 import voyager.api.domain.model.entry.EntryGeo;
@@ -104,6 +105,8 @@ public class EarthquakesRunner extends BaseDiscoveryRunner<EarthquakesLocation> 
         
         // Read the geometry information
         EntryGeo ext = null;
+
+
         for(Position p : GeoHelper.getPositions(item)) {
           if(p instanceof Point) {
             Coordinate point = ((Point)p).getCoordinate();
