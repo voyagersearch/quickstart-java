@@ -3,4 +3,5 @@ voyager.quickstart.location.earthquake.EarthquakesLocationFactory
 voyager.quickstart.location.folder.MyFolderLocationFactory
 voyager.quickstart.location.xml.XmlFolderScanLocationFactory
 voyager.quickstart.location.autonomy.AutonomyLocationFactory
+voyager.quickstart.location.instagram.InstagramLocationFactory
 
